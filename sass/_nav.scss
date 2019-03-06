@@ -1,0 +1,65 @@
+nav{
+  background-color: #ffffff;
+  width: 100%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: $otherwhite;
+}
+
+.nav__content{
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  &__menu{
+    display: flex;
+    justify-content: center;
+    width: calc(100%/12*8);
+    padding-inline-start: 0;
+    margin: 0;
+    &__item{
+      text-transform: uppercase;
+      list-style: none;
+      font-size: 12px;
+      font-family: 'PT Root UI_Bold';
+      margin-right: 30px;
+      padding: 20px 0;
+      a{
+        color: $primary_font_color;
+        text-decoration: none;
+        &:hover{
+          color: $active;
+        }
+        &:active{
+          border-bottom: 3px solid $active;
+          padding-bottom: 17px;
+        }
+      }
+      &:last-child{
+        margin-right: auto;
+      }
+    }
+  }
+  &__search{
+    display: flex;
+    width: calc(100%/12*4);
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: $otherwhite;
+    input {
+      width: 90%;
+      font-size: 16px;
+      font-family: 'PT Root UI_Regular';
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin-left: 20px;
+      &:focus{
+        outline: none;
+      }
+    }
+    img {
+      width: 15px;
+      margin-right: 20px;
+    }
+  }
+}
