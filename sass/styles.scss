@@ -1,22 +1,37 @@
 $primary_font_color:#343e5c;
+$secondary_font_color:#9ea5ba;
 $whity:#f6f6fa;
 $otherwhite:#f0f2f7;
 $active:#f54732;
 
 @font-face {
   font-family: 'PT Root UI_Bold';
-  src: url(../fonts/PT_Root_UI_Bold.ttf);
+  src: url(../fonts/PT_Root_UI_Bold.woff) format('woff');
+  src: url(../fonts/PT_Root_UI_Bold.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'PT Root UI_Regular';
-  src: url(../fonts/PT_Root_UI_Regular.ttf);
+  src: url(../fonts/PT_Root_UI_Regular.woff) format('woff');
+  src: url(../fonts/PT_Root_UI_Regular.woff2) format('woff2');
 }
 
-body {
+* {
   margin: 0;
-  background-color: black;
+  padding: 0;
 }
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/*
+.content {
+  flex: 1 0 auto;
+}
+*/
 
 @import "header.scss";
 @import "nav.scss";
+@import "footer.scss";

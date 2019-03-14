@@ -1,0 +1,131 @@
+footer{
+  background-color: #222328;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.footer__content {
+  max-width: 1170px;
+  margin: auto;
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+
+
+  &__nav{
+    display: flex;
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  &__logo {
+    width: calc(100% / 6);
+  }
+
+  &__menu{
+    display: flex;
+    justify-content: center;
+    width: calc(100%/12*8);
+    padding-inline-start: 0;
+    margin-left: calc(100%/12);
+    padding-left: 5px;
+    &-item{
+      text-transform: uppercase;
+      list-style: none;
+      /*font-size: 12px; template font*/
+      font-size:12.3px;
+      line-height: 1.2;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'PT Root UI_Bold';
+      margin-right: 30px;
+      padding: 20px 0;
+      a{
+        color: #ffffff;
+        text-decoration: none;
+        &:hover{
+          color: $active;
+        }
+      }
+      &:last-child{
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__additional-info{
+    display: flex;
+    color: $secondary_font_color;
+    padding-top: 22px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    font-family: 'PT Root UI_Regular';
+    font-weight: 500;
+
+  }
+
+  &__copyright{
+    font-size: 14px;
+    margin-right: calc(100%/12);
+  }
+
+  &__techsupport{
+    width:calc(100%/6);
+    margin-right: calc(100%/12);
+    &-text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-right: 8px;
+        align-self: flex-start;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+    &-phone{
+      display: flex;
+      justify-content: center;
+      margin-right: calc(100%/12);
+      font-family: 'PT Root UI_Bold';
+      margin-left: 30px;
+      line-height: 1.7;
+    }
+  }
+
+  &__check-order{
+    display: flex;
+    justify-content: center;
+    margin-right: calc(100%/12);
+    padding: 0 15px;
+    a{
+      font-size: 14px;
+      margin-right: 8px;
+      text-decoration: none;
+      color: $secondary_font_color;
+      &:hover{
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__log-in{
+    display: flex;
+    align-self: flex-start;
+    margin-right: calc(100%/12);
+    padding-left: 15px;
+    img{
+      margin-right: 12px;
+      align-self: center;
+    }
+    a{
+      font-size: 14px;
+      text-decoration: none;
+      color: $secondary_font_color;
+      &:hover{
+        color: #ffffff;
+      }
+    }
+  }
+}
