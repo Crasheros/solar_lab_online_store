@@ -99,12 +99,37 @@ header {
   padding: 0 15px;
 }
 
-.header__content__check-order span {
+.header__content__check-order__content {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__content__check-order__content:hover span {
+  color: #f54732;
+}
+
+.header__content__check-order__content:hover .check-order-tick {
+  fill: #f54732;
+}
+
+.header__content__check-order__content span {
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   font-size: 14px;
   font-family: 'PT Root UI_Regular';
   font-weight: 600;
-  margin-right: 9px;
+  margin-right: 8px;
   color: #343e5c;
+}
+
+.header__content__check-order__content svg .check-order-tick {
+  -webkit-transition: fill 0.25s;
+  -o-transition: fill 0.25s;
+  transition: fill 0.25s;
 }
 
 .header__content__cart {
