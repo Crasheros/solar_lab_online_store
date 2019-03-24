@@ -67,22 +67,23 @@ header {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 15px;
 }
 
-.header__content__phone img {
-  width: 16px;
+.header__content__phone svg {
   margin-right: 10px;
 }
 
 .header__content__phone span {
   font-size: 16px;
+  font-weight: 900;
   font-family: 'PT Root UI_Bold';
   color: #343e5c;
 }
 
 .header__content__check-order {
   width: 25%;
-  margin-left: auto;
+  margin-left: calc(100%/6 + 15px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,6 +96,7 @@ header {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 15px;
 }
 
 .header__content__check-order span {
@@ -115,10 +117,7 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 15px;
 }
 
 .header__content__cart img {
@@ -168,7 +167,7 @@ header {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   width: 100%;
-  height: 36px;
+  height: 32px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,9 +183,8 @@ header {
   cursor: pointer;
 }
 
-.header__content__log-in div img {
+.header__content__log-in div svg {
   margin-right: 7px;
-  width: 12px;
 }
 
 .header__content__log-in div span {
@@ -402,7 +400,7 @@ footer {
           justify-content: center;
 }
 
-.footer__content__techsupport-text img {
+.footer__content__techsupport-text svg {
   margin-right: 8px;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
