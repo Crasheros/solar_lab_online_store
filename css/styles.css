@@ -39,6 +39,18 @@ header {
   width: 100%;
 }
 
+.header__content__cart__count, .header__content__cart__count--active {
+  margin-top: 3px;
+  font-size: 11px;
+  font-family: 'PT Root UI_Regular';
+  font-weight: 600;
+  color: #142558;
+  padding: 5px 8.5px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: #f6f6fa;
+}
+
 .header__content {
   max-width: 1170px;
   margin: auto;
@@ -145,9 +157,16 @@ header {
   padding-left: 15px;
 }
 
-.header__content__cart img {
-  width: 18px;
+.header__content__cart-icon {
   margin-right: 8px;
+}
+
+.header__content__cart-icon--active {
+  margin-right: 8px;
+}
+
+.header__content__cart-icon--active path {
+  fill: #f54732;
 }
 
 .header__content__cart__text {
@@ -158,16 +177,8 @@ header {
   margin-right: 9px;
 }
 
-.header__content__cart__count {
-  margin-top: 3px;
-  font-size: 11px;
-  font-family: 'PT Root UI_Regular';
-  font-weight: 600;
-  color: #142558;
-  padding: 5px 8.5px;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  background-color: #f6f6fa;
+.header__content__cart__count--active {
+  color: #f54732;
 }
 
 .header__content__log-in {
