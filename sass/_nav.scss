@@ -6,6 +6,16 @@ nav{
   border-color: $otherwhite;
 }
 
+%nav-item{
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 12px;
+  font-family: 'PT Root UI_Bold';
+  margin-right: 30px;
+  padding: 18px 0;
+  letter-spacing: 1.1px;
+}
+
 .nav__content{
   max-width: 1170px;
   margin: auto;
@@ -18,22 +28,19 @@ nav{
     padding-inline-start: 0;
     margin: 0;
     &__item{
-      text-transform: uppercase;
-      list-style: none;
-      font-size: 12px;
-      font-family: 'PT Root UI_Bold';
-      margin-right: 30px;
-      padding: 18px 0;
-      letter-spacing: 1.1px;
+      @extend %nav-item;
+      &--active{
+        @extend %nav-item;
+        border-bottom: 3px solid $active;
+        padding-bottom: 15px;
+      }
+    }
+    &__item,&__item--active{
       a{
         color: $primary_font_color;
         text-decoration: none;
         &:hover{
           color: $active;
-        }
-        &:active{
-          border-bottom: 3px solid $active;
-          padding-bottom: 17px;
         }
       }
       &:last-child{

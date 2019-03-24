@@ -238,6 +238,16 @@ nav {
   border-color: #f0f2f7;
 }
 
+.nav__content__menu__item, .nav__content__menu__item--active {
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 12px;
+  font-family: 'PT Root UI_Bold';
+  margin-right: 30px;
+  padding: 18px 0;
+  letter-spacing: 1.1px;
+}
+
 .nav__content {
   max-width: 1170px;
   margin: auto;
@@ -266,31 +276,21 @@ nav {
   margin: 0;
 }
 
-.nav__content__menu__item {
-  text-transform: uppercase;
-  list-style: none;
-  font-size: 12px;
-  font-family: 'PT Root UI_Bold';
-  margin-right: 30px;
-  padding: 18px 0;
-  letter-spacing: 1.1px;
+.nav__content__menu__item--active {
+  border-bottom: 3px solid #f54732;
+  padding-bottom: 15px;
 }
 
-.nav__content__menu__item a {
+.nav__content__menu__item a, .nav__content__menu__item--active a {
   color: #343e5c;
   text-decoration: none;
 }
 
-.nav__content__menu__item a:hover {
+.nav__content__menu__item a:hover, .nav__content__menu__item--active a:hover {
   color: #f54732;
 }
 
-.nav__content__menu__item a:active {
-  border-bottom: 3px solid #f54732;
-  padding-bottom: 17px;
-}
-
-.nav__content__menu__item:last-child {
+.nav__content__menu__item:last-child, .nav__content__menu__item--active:last-child {
   margin-right: auto;
 }
 
