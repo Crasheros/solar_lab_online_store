@@ -10,6 +10,7 @@ nav{
   max-width: 1170px;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   &__menu{
     display: flex;
     justify-content: center;
@@ -22,7 +23,8 @@ nav{
       font-size: 12px;
       font-family: 'PT Root UI_Bold';
       margin-right: 30px;
-      padding: 20px 0;
+      padding: 18px 0;
+      letter-spacing: 1.1px;
       a{
         color: $primary_font_color;
         text-decoration: none;
@@ -41,10 +43,12 @@ nav{
   }
   &__search{
     display: flex;
-    width: calc(100%/12*4);
+    width: calc(100%/12*4 - 42px);
     border-width: 0 1px;
     border-style: solid;
     border-color: $otherwhite;
+    align-items: center;
+    padding-left: 20px;
     input {
       width: 90%;
       font-size: 16px;
@@ -52,13 +56,11 @@ nav{
       height: 100%;
       border: none;
       padding: 0;
-      margin-left: 20px;
       &:focus{
         outline: none;
       }
     }
-    img {
-      width: 15px;
+    &-icon {
       margin-right: 20px;
     }
   }

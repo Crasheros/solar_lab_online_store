@@ -245,6 +245,10 @@ nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav__content__menu {
@@ -268,7 +272,8 @@ nav {
   font-size: 12px;
   font-family: 'PT Root UI_Bold';
   margin-right: 30px;
-  padding: 20px 0;
+  padding: 18px 0;
+  letter-spacing: 1.1px;
 }
 
 .nav__content__menu__item a {
@@ -294,10 +299,15 @@ nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100%/12*4);
+  width: calc(100%/12*4 - 42px);
   border-width: 0 1px;
   border-style: solid;
   border-color: #f0f2f7;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
 }
 
 .nav__content__search input {
@@ -307,15 +317,13 @@ nav {
   height: 100%;
   border: none;
   padding: 0;
-  margin-left: 20px;
 }
 
 .nav__content__search input:focus {
   outline: none;
 }
 
-.nav__content__search img {
-  width: 15px;
+.nav__content__search-icon {
   margin-right: 20px;
 }
 
