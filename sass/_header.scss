@@ -1,6 +1,7 @@
 header {
   background-color: #ffffff;
   width: 100%;
+  z-index: 1;
 }
 
 %cart-count{
@@ -72,7 +73,7 @@ header {
     width: calc(100%/12);
     align-items: center;
     justify-content: center;
-    &-icon--active{
+    &-icon--active :first-child{
       fill:$active;
     }
   }

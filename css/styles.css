@@ -37,6 +37,7 @@ body {
 header {
   background-color: #ffffff;
   width: 100%;
+  z-index: 1;
 }
 
 .header__cart-count, .header__cart-count--active {
@@ -141,7 +142,7 @@ header {
           justify-content: center;
 }
 
-.header__search-icon--active {
+.header__search-icon--active :first-child {
   fill: #f54732;
 }
 
@@ -421,15 +422,7 @@ header {
   }
 }
 
-nav {
-  background-color: #ffffff;
-  width: 100%;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: #f0f2f7;
-}
-
-.nav__content__menu__item, .nav__content__menu__item--active {
+.nav__menu-item, .nav__menu-item--active {
   text-transform: uppercase;
   list-style: none;
   font-size: 12px;
@@ -437,6 +430,14 @@ nav {
   margin-right: 30px;
   padding: 18px 0;
   letter-spacing: 1.1px;
+}
+
+.nav {
+  background-color: #ffffff;
+  width: 100%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #f0f2f7;
 }
 
 .nav__content {
@@ -452,7 +453,7 @@ nav {
           justify-content: space-between;
 }
 
-.nav__content__menu {
+.nav__menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -467,25 +468,25 @@ nav {
   margin: 0;
 }
 
-.nav__content__menu__item--active {
+.nav__menu-item--active {
   border-bottom: 3px solid #f54732;
   padding-bottom: 15px;
 }
 
-.nav__content__menu__item a, .nav__content__menu__item--active a {
+.nav__menu-item a, .nav__menu-item--active a {
   color: #142558;
   text-decoration: none;
 }
 
-.nav__content__menu__item a:hover, .nav__content__menu__item--active a:hover {
+.nav__menu-item a:hover, .nav__menu-item--active a:hover {
   color: #f54732;
 }
 
-.nav__content__menu__item:last-child, .nav__content__menu__item--active:last-child {
+.nav__menu-item:last-child, .nav__menu-item--active:last-child {
   margin-right: auto;
 }
 
-.nav__content__search {
+.nav__search {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -501,7 +502,7 @@ nav {
   padding-left: 20px;
 }
 
-.nav__content__search input {
+.nav__search input {
   width: 90%;
   font-size: 16px;
   font-family: 'PT Root UI_Regular';
@@ -510,12 +511,53 @@ nav {
   padding: 0;
 }
 
-.nav__content__search input:focus {
+.nav__search input:focus {
   outline: none;
 }
 
-.nav__content__search-icon {
+.nav__search input:focus + .nav__search-icon :first-child {
+  fill: #f54732;
+}
+
+.nav__search-icon {
   margin-right: 20px;
+}
+
+.nav__search-icon :first-child {
+  -webkit-transition: fill 0.25s;
+  -o-transition: fill 0.25s;
+  transition: fill 0.25s;
+}
+
+.nav__search-close {
+  margin-right: 15px;
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .nav {
+    position: absolute;
+    margin-top: 69px;
+    z-index: 1;
+    display: none;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__search {
+    width: 100%;
+    padding: 13px 0 13px 15px;
+  }
+  .nav__search input {
+    width: 100%;
+    font-size: 14px;
+  }
+  .nav__search-icon {
+    display: none;
+  }
+  .nav__search-close {
+    display: block;
+  }
 }
 
 footer {
@@ -712,4 +754,12 @@ footer {
 
 .footer__content__log-in a:hover {
   color: #ffffff;
+}
+
+.black-bg {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: calc(100vh);
+  width: 100%;
+  position: absolute;
+  display: none;
 }
