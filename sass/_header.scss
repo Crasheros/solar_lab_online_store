@@ -1,6 +1,7 @@
 header {
   background-color: #ffffff;
   width: 100%;
+  z-index: 1;
 }
 
 %cart-count{
@@ -14,11 +15,27 @@ header {
   background-color: $whity;
 }
 
-.header__content {
-  max-width: 1170px;
-  margin: auto;
-  padding: 13px 0;
-  display: flex;
+.header{
+  &__content{
+    max-width: 1170px;
+    margin: auto;
+    padding: 13px 0;
+    display: flex;
+  }
+
+  &__burger-menu{
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    padding-top: 15px;
+    display: none;
+  }
+
+  &__burger-icon{
+    display: none;
+    align-self: center;
+    padding:0 15px;
+  }
 
   &__logo {
     width:calc(100%/6);
@@ -48,26 +65,16 @@ header {
     align-items: center;
     justify-content: center;
     padding: 0 15px;
-    &__content{
-      text-decoration: none;
-      display: flex;
-      &:hover span{
-        color: $active;
-      }
-      &:hover .check-order-tick{
-        fill:$active;
-      }
-      span {
-        transition: 0.25s;
-        font-size: 14px;
-        font-family: 'PT Root UI_Regular';
-        font-weight: 600;
-        margin-right: 8px;
-        color: $primary_font_color;
-      }
-      svg .check-order-tick{
-        transition: fill 0.25s;
-      }
+  }
+
+  &__search{
+    display: none;
+    margin-left: auto;
+    width: calc(100%/12);
+    align-items: center;
+    justify-content: center;
+    &-icon--active :first-child{
+      fill:$active;
     }
   }
 
@@ -85,14 +92,14 @@ header {
         }
       }
     }
-    &__text{
+    &-text{
       font-size: 14px;
       font-family: 'PT Root UI_Regular';
       font-weight: 600;
       color: $primary_font_color;
       margin-right: 9px;
     }
-    &__count{
+    &-count{
       @extend %cart-count;
       &--active{
         @extend %cart-count;
@@ -106,25 +113,185 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    div{
-      border: 2px solid #e3e8f0;
-      background-color: #ffffff;
-      border-radius: 5px;
+  }
+}
+
+.burger-menu{
+  &__close{
+    padding:5px 15px 0 15px;
+    position: absolute;
+  }
+
+  &__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-item{
       width: 100%;
-      height: 32px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      cursor: pointer;
-      svg{
-        margin-right: 7px;
-      }
-      span{
-        font-size: 14px;
-        font-family: 'PT Root UI_Regular';
-        font-weight: 600;
+      text-transform: uppercase;
+      list-style: none;
+      font-size: 12px;
+      font-family: 'PT Root UI_Bold';
+      letter-spacing: 1.1px;
+      margin-bottom: 16px;
+      a{
         color: $primary_font_color;
+        text-decoration: none;
+        &:hover{
+          color: $active;
+        }
       }
     }
+  }
+
+  &__divider{
+    height: 1px;
+    background-color: $otherwhite;
+    width: 50%;
+    margin: 20px 0 25px 0;
+  }
+
+  &__techsupport{
+    font-family: 'PT Root UI_Bold';
+    color: $primary_font_color;
+  }
+
+  &__check-order{
+    margin: 20px 0;
+  }
+
+  &__log-in{
+    width: calc(100%/6 - 30px);
+    margin-bottom: 60px;
+  }
+
+}
+
+.techsupport{
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon{
+    margin-right: 8px;
+    align-self: flex-start;
+  }
+
+  &__text{
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__phone{
+    display: flex;
+    justify-content: center;
+    line-height: 1.7;
+    font-family: "PT Root UI";
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.check-order{
+  &__content{
+    text-decoration: none;
+    display: flex;
+    &:hover .check-order__text{
+      color: $active;
+    }
+    &:hover .check-order__icon :first-child{
+      fill:$active;
+    }
+    .check-order__icon :first-child{
+      transition: fill 0.25s;
+    }
+  }
+
+  &__text {
+    transition: 0.25s;
+    font-size: 14px;
+    font-family: 'PT Root UI_Regular';
+    font-weight: 600;
+    margin-right: 8px;
+    color: $primary_font_color;
+  }
+}
+
+.log-in{
+  &__content{
+    border: 2px solid #e3e8f0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    svg{
+      margin-right: 7px;
+    }
+    span{
+      font-size: 14px;
+      font-family: 'PT Root UI_Regular';
+      font-weight: 600;
+      color: $primary_font_color;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header{
+    &__content{
+      padding: 10px 0;
+    }
+
+    &__burger-icon{
+      display: flex;
+    }
+
+    &__logo img{
+      max-height: 45px;
+    }
+
+    &__phone,&__check-order,&__cart-text,&__log-in{
+      display: none;
+    }
+
+    &__cart{
+      width:calc(100%/12);
+      margin-left: -15px;
+    }
+
+    &__search{
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .header{
+    &__search{
+      padding-right: 15px;
+    }
+    &__cart{
+      padding-right: 15px;
+      width: calc(100%/6);
+    }
+  }
+  .header__search{
+
   }
 }

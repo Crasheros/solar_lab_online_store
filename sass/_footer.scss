@@ -1,21 +1,19 @@
-footer{
+.footer{
   background-color: #222328;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.footer__content {
-  max-width: 1170px;
-  margin: auto;
-  padding: 20px 0 40px 0;
-  display: flex;
-  flex-direction: column;
-
+  &__content{
+    max-width: 1170px;
+    margin: auto;
+    padding: 16px 0 42px 0;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__nav{
     display: flex;
     width: 100%;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
   }
 
   &__logo {
@@ -29,6 +27,7 @@ footer{
     padding-inline-start: 0;
     margin-left: calc(100%/12);
     padding-left: 5px;
+    align-items: center;
     &-item{
       text-transform: uppercase;
       list-style: none;
@@ -40,7 +39,6 @@ footer{
       letter-spacing: 1px;
       font-family: 'PT Root UI_Bold';
       margin-right: 30px;
-      padding: 20px 0;
       a{
         color: #ffffff;
         text-decoration: none;
@@ -54,19 +52,31 @@ footer{
     }
   }
 
+  &__divider{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.1);
+  }
+
   &__additional-info{
     display: flex;
     color: $secondary_font_color;
     padding-top: 22px;
-    border-top:1px solid rgba(255,255,255,0.1);
     font-family: 'PT Root UI_Regular';
     font-weight: 500;
-
   }
 
   &__copyright{
     font-size: 14px;
     margin-right: calc(100%/12);
+    &-mob{
+      color: $secondary_font_color;
+      font-family: 'PT Root UI_Regular';
+      font-weight: 500;
+      display: none;
+      font-size: 14px;
+      margin-top: 12px;
+    }
   }
 
   &__techsupport{
@@ -126,6 +136,154 @@ footer{
       &:hover{
         color: #ffffff;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer{
+    &__content{
+      flex-direction: row;
+      padding-top: 31px;
+    }
+
+    &__nav{
+      width: 66.67%;
+    }
+    &__logo{
+      padding-left: 15px;
+      width: 50%;
+    }
+    &__menu{
+      flex-direction: column;
+      width: 50%;
+      margin-left: 0;
+      padding-left: 20px;
+      &-item{
+        padding: 9px 0;
+        margin-right: auto;
+      }
+      & :first-child{
+        padding-top: 0;
+      }
+    }
+
+    &__divider{
+      display: none;
+    }
+
+    &__additional-info{
+      flex-direction: column;
+      width: 33.3%;
+      padding-top: 0;
+    }
+
+    &__copyright{
+      display: none;
+      &-mob{
+        display: block;
+      }
+    }
+
+    &__techsupport{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      &-text{
+        width: 100%;
+        justify-content: left;
+      }
+      &-phone{
+        justify-content: left;
+        margin: 0 0 0 22px;
+        width: 100%;
+      }
+    }
+
+    &__check-order{
+      margin: 15px 0 0 0;
+      padding: 0 0 0 15px;
+      justify-content: normal;
+    }
+
+    &__log-in{
+      margin: 22px 0 0 0;
+      padding: 0 0 0 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .footer{
+    &__content{
+      flex-direction: column;
+    }
+    &__nav{
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 27px;
+    }
+    &__logo{
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      display: flex;
+    }
+    &__menu{
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      display: flex;
+      margin-top: 25px;
+      &-item{
+        margin-right: 0;
+      }
+      &-item:last-child{
+        margin-right: 0;
+      }
+    }
+
+    &__divider{
+      display: block;
+      width: calc(100% - 30px);
+      margin: 0 15px;
+    }
+
+    &__additional-info{
+      width: 100%;
+      align-items: center;
+    }
+
+    &__copyright{
+      display: block;
+      margin-right: 0;
+      margin-top: 30px;
+      &-mob{
+        display: none;
+      }
+    }
+
+    &__techsupport{
+      margin-right: 0;
+      margin-top: 20px;
+      padding-left: 0;
+      &-text{
+        justify-content: center;
+      }
+      &-phone{
+        justify-content: center;
+        margin-left: 10px;
+      }
+    }
+
+    &__check-order{
+      padding: 0;
+    }
+    &__log-in{
+      display: flex;
+      align-self: center;
+      padding-left: 0;
     }
   }
 }

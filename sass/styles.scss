@@ -1,4 +1,4 @@
-$primary_font_color:#343e5c;
+$primary_font_color:rgb(20, 37, 88);
 $secondary_font_color:#9ea5ba;
 $whity:#f6f6fa;
 $otherwhite:#f0f2f7;
@@ -25,6 +25,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
 }
 /*
 .content {
@@ -35,3 +36,11 @@ body {
 @import "header.scss";
 @import "nav.scss";
 @import "footer.scss";
+
+.black-bg{
+  background-color: rgba(0,0,0,0.3);
+  height: calc(100vh);
+  width: 100%;
+  position: absolute;
+  display: none;
+}
