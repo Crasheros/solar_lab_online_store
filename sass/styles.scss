@@ -3,6 +3,7 @@ $secondary_font_color:#9ea5ba;
 $whity:#f6f6fa;
 $otherwhite:#f0f2f7;
 $active:#f54732;
+$bg_main:#f5f8fa;
 
 @font-face {
   font-family: 'PT Root UI_Bold';
@@ -27,14 +28,10 @@ body {
   flex-direction: column;
   min-width: 320px;
 }
-/*
-.content {
-  flex: 1 0 auto;
-}
-*/
 
 @import "header.scss";
 @import "nav.scss";
+@import "main.scss";
 @import "footer.scss";
 
 .black-bg{
