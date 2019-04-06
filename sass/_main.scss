@@ -3,7 +3,7 @@
   background-color: $bg_main;
   &__banner {
     width: 100%;
-    height: 240px;
+    height: 235px;
     background-color: white;
   }
   &__filter {
@@ -37,11 +37,12 @@
 
   &__pagination {
     max-width: 1170px;
-    margin: 55px auto 90px auto;
+    margin: 58px auto 98px auto;
     background-color: white;
-    height: 92px;
+    height: 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -60,10 +61,12 @@
     line-height: 1.2;
     font-family: 'PT Root UI_Bold';
     color: $primary_font_color;
+    padding-bottom: 22px;
   }
   &__chair {
     width: 25%;
     margin-top: 20px;
+    margin-right: 5.35%;
   }
 }
 
@@ -88,18 +91,18 @@
 %filter-dropdown-menu {
   position: absolute;
   list-style: none;
-  padding: 14px 0 20px 26px;
+  padding: 10px 0 20px 24px;
   background-color: white;
-  width: 130%;
+  width: 125%;
   cursor: auto;
   top: 180%;
   border-radius: 5px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.3);
 }
 
 %filter-dropdown-item {
   cursor: pointer;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 %page {
@@ -117,32 +120,40 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
 
     &-text {
       height: 100%;
       display: flex;
       align-items: center;
       margin-left: auto;
-      padding-right: 15px;
+      padding-right: 28px;
+      color: $primary_font_color;
+      font-family: 'PT Root UI_Regular';
+
     }
     &-content {
-      width: 66.7%;
+      width: 69%;
     }
     &-min, &-max {
-      width: 35%;
+      margin-top: 8px;
+      width: 33.9%;
       border-radius: 2px;
       border: 2px solid $btn_border;
-      padding: 5px;
+      padding: 6px 5px;
       font-family: 'PT Root UI_Bold';
       font-size: 14px;
       outline: 0;
     }
+    &-max{
+      float: right;
+    }
     &-divider {
       padding: 0 6.5px;
+      font-size: 24px;
+      font-weight: 100;
     }
     &-slider {
-      width: 99%;
+      width: 100%;
     }
 
   }
@@ -152,6 +163,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding-left: 30px;
     &-text {
       @extend %filter-text;
     }
@@ -159,6 +172,7 @@
       @extend %filter-dropdown;
       &-menu {
         @extend %filter-dropdown-menu;
+        display: none;
       }
       &-item {
         @extend %filter-dropdown-item;
@@ -184,6 +198,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding-left: 20px;
     &-text {
       @extend %filter-text;
     }
@@ -191,6 +207,7 @@
       @extend %filter-dropdown;
       &-menu {
         @extend %filter-dropdown-menu;
+        display: none;
       }
       &-item {
         @extend %filter-dropdown-item;
@@ -233,7 +250,6 @@
   &__min, &__max {
     position: absolute;
     top: -8px;
-    left: -8px;
   }
 
   &__min {
@@ -250,6 +266,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
+    overflow: hidden;
     &:hover {
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
       transition: box-shadow 0.25s;
@@ -257,9 +274,15 @@
   }
   &__img {
     width: 75%;
-    & :first-child {
-      height: 200px;
-    }
+    height: 232px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__name {
     font-size: 16px;
@@ -267,7 +290,7 @@
     line-height: 1.25;
     color: $primary_font_color;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &__price {
@@ -282,7 +305,7 @@
     font-family: "PT Root UI_Bold";
     line-height: 1.2;
     color: $primary_font_color;
-    padding: 10px 12px;
+    padding: 8px 16px;
     border: 2px solid $btn_border;
     border-radius: 3px;
     margin: 25px 0 40px 0;
@@ -293,6 +316,7 @@
 .products-banner {
   &__content {
     background-image: url("../images/products_banner.jpg");
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -307,7 +331,7 @@
     line-height: 1.2;
     display: flex;
     justify-self: center;
-    margin-left: 10%;
+    margin-left: 7%;
   }
   &__btn {
     font-size: 14px;
@@ -319,14 +343,13 @@
     border: 2px solid #a8b8c6;
     border-radius: 5px;
     margin-top: 30px;
-    padding: 10px 12px;
-    margin-left: 10%;
+    padding: 8px 10px;
+    margin-left: 7%;
   }
 }
 
 .pagination {
   &__first-icon {
-    margin-left: calc(20% + 15px);
     margin-right: 15px;
     cursor: pointer;
     & :nth-child(n + 2){
@@ -371,6 +394,7 @@
 
   &__next-icon{
     cursor: pointer;
+    margin-left: 26px;
     & :last-child{
       transition: fill 0.25s;
     }
@@ -387,6 +411,270 @@
     }
     &:hover :nth-child(n + 2){
       fill: $active;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__filter{
+      margin: 40px 15px 10px 15px;
+      height: auto;
+      padding: 20px 0;
+    }
+    &__products-wrapper{
+      padding: 0 15px;
+    }
+    &__product{
+      width: 33.3%;
+    }
+    &__products-banner{
+      width: 100%;
+      height: 415px;
+    }
+    &__pagination{
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .banner{
+    &__content{
+      padding: 0 15px;
+    }
+    &__chair{
+      width: unset;
+      margin-right: 0;
+    }
+  }
+
+  .filter{
+    &__price{
+      margin-left: calc(100%/12 - 25px);
+      width: calc(33.3% - 30px);
+      flex-direction: column;
+      align-items: normal;
+      &-text{
+        height: auto;
+        margin-left: 0;
+      }
+      &-content{
+        width: 100%;
+      }
+      &-min,&-max{
+        width: 34.5%;
+        margin-top: 10px;
+      }
+    }
+    &__sort{
+      width: 25%;
+      flex-direction: column;
+      padding: 0;
+      margin-left: calc(100%/12 - 20px);
+      align-items: normal;
+      &-text{
+        display: flex;
+        margin-right: 0;
+      }
+      &-dropdown{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+    &__amount{
+      width: 25%;
+      flex-direction: column;
+      padding: 0;
+      margin-left: calc(100%/12 - 25px);
+      align-items: normal;
+      &-text{
+        display: flex;
+        margin-right: 0;
+      }
+      &-dropdown{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .products-banner{
+    &__content{
+      background-image: url("../images/products_banner_750.jpg");
+    }
+    &__text{
+      width: 45%;
+      margin-left: 5%;
+    }
+    &__btn{
+      margin-left: 5%;
+      margin-top: 25px;
+      padding: 8px 16px;
+      width: fit-content;
+    }
+  }
+
+  .pagination{
+    &__first-icon{
+      margin-left: 10px;
+    }
+    &__pages{
+      width: 66.7%;
+    }
+    &__last-icon{
+      margin-right: 10px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__banner{
+      height: 120px;
+    }
+    &__filter{
+      flex-direction: column;
+      padding-top: 25px;
+      padding-bottom: 27px;
+      margin-top: 36px;
+      margin-bottom: 16px;
+    }
+    &__product{
+      width: 100%;
+      padding: 8px 15px;
+    }
+    &__products-banner{
+      height: 330px;
+      padding: 8px 15px;
+    }
+    &__pagination{
+      margin-top: 38px;
+      height: 80px;
+      padding: 0 24px;
+    }
+  }
+  .banner{
+    &__text{
+      font-size: 24px;
+      width: 33.2%;
+      padding-bottom: 0;
+    }
+    &__chair{
+      margin-top: 18px;
+      width: auto;
+      img{
+        height: 150%;
+        float: right;
+      }
+    }
+  }
+  .filter{
+    &__price{
+      width: 100%;
+      padding: 0 20px 18px 24px;
+      box-sizing: border-box;
+      border-bottom: 1px solid $otherwhite;
+      margin-left: 0;
+      &-min,&-max{
+        width: 37.5%;
+      }
+      &-divider{
+        padding: 0 4px;
+      }
+    }
+    &__sort{
+      width: 100%;
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 20px;
+      padding-left: 24px;
+      justify-content: normal;
+      &-text{
+        margin-right: 10px;
+      }
+    }
+    &__amount{
+      width: 100%;
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 20px;
+      padding-left: 24px;
+      justify-content: normal;
+      &-text{
+        margin-right: 10px;
+      }
+      &-active{
+        margin-right: 10px;
+      }
+    }
+  }
+  .product{
+    &__content{
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 0 15px 0;
+    }
+    &__img{
+      width: 42%;
+      height: unset;
+      padding-right: 6px;
+      img{
+        width: 100%;
+      }
+    }
+    &__info{
+      align-items: normal;
+    }
+    &__name{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__price{
+      font-size: 20px;
+    }
+    &__cart-btn{
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+  .products-banner{
+    &__content{
+      background-image: url("../images/products_banner_320.jpg");
+    }
+    &__text{
+      font-size: 24px;
+      margin-left: 8%;
+      width: 70%;
+    }
+    &__btn{
+      margin-left: 8%;
+      border-color: #98a7b2;
+    }
+  }
+  .pagination{
+    &__first-icon{
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    &__prev-icon{
+      margin-right: 10px;
+    }
+    &__pages{
+      width: auto;
+    }
+    &__page{
+      display: none;
+      &--active{
+        padding: 10px 15px;
+      }
+    }
+    &__next-icon{
+      margin-left: 10px;
+    }
+    &__last-icon{
+      margin-left: 10px;
+      margin-right: 0;
     }
   }
 }
