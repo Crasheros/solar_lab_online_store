@@ -4,16 +4,14 @@
   font-size: 12px;
   font-family: 'PT Root UI_Bold';
   margin-right: 30px;
-  padding: 18px 0;
+  padding: 20px 0 21px 0;
   letter-spacing: 1.1px;
 }
 
 .nav{
   background-color: #ffffff;
   width: 100%;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: $otherwhite;
+  border-bottom: 1px solid $otherwhite;
   &__content{
     max-width: 1170px;
     margin: auto;
