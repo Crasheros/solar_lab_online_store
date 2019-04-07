@@ -600,7 +600,8 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 36px 0 90px 0;
+  padding: 36px 0 45px 0;
+  margin-bottom: 120px;
 }
 
 .main__carousel {
@@ -626,6 +627,9 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .main__product-image {
@@ -647,6 +651,15 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
+}
+
+.main__product-description {
+  list-style: none;
+  width: 90%;
+}
+
+.main__product-description-item {
+  margin-bottom: 45px;
 }
 
 .breadcrumbs__main-page, .breadcrumbs__catalog {
@@ -838,6 +851,21 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
+}
+
+.description__title {
+  font-family: "PT Root UI_Bold";
+  font-size: 18px;
+  color: #142558;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.description__text {
+  font-family: "PT Root UI_Regular";
+  font-size: 16px;
+  color: #828aa2;
+  line-height: 1.5;
 }
 
 .footer {
