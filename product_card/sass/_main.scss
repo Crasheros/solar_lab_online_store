@@ -23,13 +23,29 @@ $secondary_font_color_main:rgb(130, 138, 162);
   }
   &__container{
     background-color: white;
+    display: flex;
+    padding: 36px 0 90px 0;
   }
   &__carousel{
     width: calc(100%/6);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 36px 0 90px 0;
+  }
+  &__content{
+    width: calc(100%/12*10);
+    display: flex;
+  }
+  &__product-image{
+    width: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  &__product-info{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
   }
 }
 
@@ -72,6 +88,102 @@ $secondary_font_color_main:rgb(130, 138, 162);
       img{
         width: 100%;
       }
+    }
+  }
+}
+
+.product{
+  &__name{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    margin-bottom: 5px;
+  }
+  &__code{
+    color: $secondary_font_color_main;
+    font-family: "PT Root UI_Regular";
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  &__available{
+    padding-bottom: 25px;
+    &-icon{
+      margin-right: 5px;
+    }
+    &-text{
+      color: $primary_font_color;
+      font-family: "PT Root UI_Regular";
+      font-size: 16px;
+    }
+  }
+  &__purchase{
+    background-color: $bg_main;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content{
+    width: 100%;
+    display: flex;
+  }
+  &__price{
+    line-height: 0.7;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    font-size: 30px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  &__amount{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    &-less{
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &-value{
+      width: 5%;
+      padding: 6px 16px;
+      margin: 0 10px;
+      border-color: $btn_border;
+      border-style: solid;
+      font-family: "PT Root UI_Regular";
+      text-align: center;
+      font-size: 16px;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-more{
+      cursor: pointer;
+    }
+  }
+  &__buy-btn{
+    width: 100%;
+    background-color: $active;
+    border-radius: 5px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 20px 0;
+  }
+  &__free-delivery{
+    width: 100%;
+    display: flex;
+    &-text{
+      font-size: 16px;
+      line-height: 1.2;
+      color: $secondary_font_color_main;
+      font-family: "PT Root UI_Regular";
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
     }
   }
 }
