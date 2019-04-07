@@ -568,13 +568,24 @@ header {
 .carousel__image, .carousel__image--active {
   list-style: none;
   margin: 8px 0;
-  width: 65px;
-  height: 65px;
-  border: 2px solid;
-  border-color: transparent;
+  width: 63px;
+  height: 63px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   overflow: hidden;
+  border: 2px solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main {
@@ -591,7 +602,7 @@ header {
 }
 
 .main__breadcrumbs {
-  margin: 30px 0;
+  margin: 24px 0 26px 0;
 }
 
 .main__container {
@@ -600,8 +611,9 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 36px 0 45px 0;
-  margin-bottom: 120px;
+  padding: 36px 0 47px 0;
+  margin-bottom: 118px;
+  padding-left: 5px;
 }
 
 .main__carousel {
@@ -619,6 +631,9 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 35px;
 }
 
 .main__content {
@@ -636,10 +651,6 @@ header {
   width: 50%;
 }
 
-.main__product-image img {
-  width: 100%;
-}
-
 .main__product-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -651,15 +662,19 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
+  padding: 8px 3px 8px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main__product-description {
+  margin-top: 5px;
   list-style: none;
   width: 90%;
 }
 
 .main__product-description-item {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs__main-page, .breadcrumbs__catalog {
@@ -668,6 +683,10 @@ header {
   font-family: "PT Root UI_Regular";
   font-size: 14px;
   line-height: 1.2;
+}
+
+.breadcrumbs__divider {
+  margin: 0 3px;
 }
 
 .breadcrumbs__product {
@@ -688,41 +707,45 @@ header {
 }
 
 .carousel__images {
-  padding: 8px 0;
+  padding: 8px 0 2px 0;
 }
 
-.carousel__image img {
-  width: 100%;
+.carousel__image {
+  border-color: transparent;
 }
 
 .carousel__image--active {
   border-color: #e3e8f0;
 }
 
-.carousel__image--active img {
-  width: 100%;
-}
-
 .product__name {
   font-size: 36px;
   font-family: "PT Root UI_Bold";
   color: #142558;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .product__code {
   color: #828aa2;
   font-family: "PT Root UI_Regular";
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .product__available {
-  padding-bottom: 25px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product__available-icon {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .product__available-text {
@@ -733,7 +756,7 @@ header {
 
 .product__purchase {
   background-color: #f5f8fa;
-  padding: 25px 30px;
+  padding: 27px 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -743,6 +766,8 @@ header {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
 }
 
 .product__content {
@@ -779,6 +804,7 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 30px;
 }
 
 .product__amount-less {
@@ -788,7 +814,7 @@ header {
 
 .product__amount-value {
   width: 5%;
-  padding: 6px 16px;
+  padding: 6px 18px;
   margin: 0 10px;
   border-color: #e3e8f0;
   border-style: solid;
@@ -826,7 +852,8 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30px 0 20px 0;
+  margin: 32px 0 20px 0;
+  cursor: pointer;
 }
 
 .product__free-delivery {
@@ -857,7 +884,7 @@ header {
   font-family: "PT Root UI_Bold";
   font-size: 18px;
   color: #142558;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   display: block;
 }
 

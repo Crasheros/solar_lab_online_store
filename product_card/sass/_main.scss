@@ -3,12 +3,14 @@ $secondary_font_color_main:rgb(130, 138, 162);
 %carousel-image{
   list-style: none;
   margin: 8px 0;
-  width: 65px;
-  height: 65px;
-  border: 2px solid;
-  border-color: transparent;
+  width: 63px;
+  height: 63px;
   border-radius: 5px;
   overflow: hidden;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main{
@@ -19,19 +21,22 @@ $secondary_font_color_main:rgb(130, 138, 162);
     margin: 0 auto;
   }
   &__breadcrumbs{
-    margin: 30px 0;
+    margin: 24px 0 26px 0;
   }
   &__container{
     background-color: white;
     display: flex;
-    padding: 36px 0 45px 0;
-    margin-bottom: 120px;
+    padding: 36px 0 47px 0;
+    margin-bottom: 118px;
+    padding-left: 5px;
   }
   &__carousel{
     width: calc(100%/6);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    padding-right: 35px;
   }
   &__content{
     width: calc(100%/12*10);
@@ -40,20 +45,20 @@ $secondary_font_color_main:rgb(130, 138, 162);
   }
   &__product-image{
     width: 50%;
-    img{
-      width: 100%;
-    }
   }
   &__product-info{
     display: flex;
     flex-direction: column;
     width: 40%;
+    padding: 8px 3px 8px 15px;
+    box-sizing: border-box;
   }
   &__product-description{
+    margin-top: 5px;
     list-style: none;
     width: 90%;
     &-item{
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -65,6 +70,9 @@ $secondary_font_color_main:rgb(130, 138, 162);
     font-family: "PT Root UI_Regular";
     font-size: 14px;
     line-height: 1.2;
+  }
+  &__divider{
+    margin: 0 3px;
   }
   &__product{
     display: inline-block;
@@ -84,19 +92,14 @@ $secondary_font_color_main:rgb(130, 138, 162);
     }
   }
   &__images{
-    padding: 8px 0;
+    padding: 8px 0 2px 0;
   }
   &__image{
     @extend %carousel-image;
-    img{
-      width: 100%;
-    }
+    border-color: transparent;
     &--active{
       @extend %carousel-image;
       border-color: $btn_border;
-      img{
-        width: 100%;
-      }
     }
   }
 }
@@ -106,18 +109,20 @@ $secondary_font_color_main:rgb(130, 138, 162);
     font-size: 36px;
     font-family: "PT Root UI_Bold";
     color: $primary_font_color;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
   &__code{
     color: $secondary_font_color_main;
     font-family: "PT Root UI_Regular";
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
   &__available{
-    padding-bottom: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
     &-icon{
-      margin-right: 5px;
+      margin-right: 8px;
     }
     &-text{
       color: $primary_font_color;
@@ -127,9 +132,10 @@ $secondary_font_color_main:rgb(130, 138, 162);
   }
   &__purchase{
     background-color: $bg_main;
-    padding: 25px 30px;
+    padding: 27px 30px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
   }
   &__content{
     width: 100%;
@@ -148,13 +154,14 @@ $secondary_font_color_main:rgb(130, 138, 162);
     width: 50%;
     display: flex;
     align-items: center;
+    padding-left: 30px;
     &-less{
       padding: 10px 0;
       cursor: pointer;
     }
     &-value{
       width: 5%;
-      padding: 6px 16px;
+      padding: 6px 18px;
       margin: 0 10px;
       border-color: $btn_border;
       border-style: solid;
@@ -180,7 +187,8 @@ $secondary_font_color_main:rgb(130, 138, 162);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 20px 0;
+    margin: 32px 0 20px 0;
+    cursor: pointer;
   }
   &__free-delivery{
     width: 100%;
@@ -202,7 +210,7 @@ $secondary_font_color_main:rgb(130, 138, 162);
     font-family: "PT Root UI_Bold";
     font-size: 18px;
     color: $primary_font_color;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     display: block;
   }
   &__text{
