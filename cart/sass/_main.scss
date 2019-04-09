@@ -1,0 +1,132 @@
+$secondary_font_color_main:rgb(130, 138, 162);
+.main{
+  flex: 1 0 auto;
+  background-color: $bg_main;
+  &__wrapper{
+    max-width: 870px;
+    height: 10px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  &__cart{
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 60px;
+  }
+}
+
+.cart{
+  &__title{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.2;
+    width: 100%;
+    height: 110px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  &__items{
+    padding: 0 50px;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+  }
+  &__item{
+    height: 99px;
+    border-top: 1px solid $otherwhite;
+    display: flex;
+    align-items: center;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px 0 65px;
+    height: 93px;
+    align-items: center;
+    background-color: #e3eaef;
+    border-radius: 0 0 5px 5px;
+  }
+  &__amount{
+    font-size: 18px;
+    font-family: "PT Root UI_Regular";
+    color: rgb(121, 132, 143);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  &__total{
+    color: $primary_font_color;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "PT Root UI_Bold";
+  }
+}
+
+.item{
+  &__image{
+    width: calc(100%/12);
+  }
+  &__info{
+    width: calc(100%/6);
+    padding-left: 15px;
+    font-family: "PT Root UI_Regular";
+  }
+  &__name{
+    font-size: 16px;
+    color: $primary_font_color;
+    font-weight: 600;
+    line-height: 1.2;
+
+  }
+  &__code{
+    font-size: 14px;
+    color: $secondary_font_color_main;
+  }
+  &__price,&__price-total{
+    width: calc(100%/12);
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.167;
+    color: $primary_font_color;
+    padding: 0 15px;
+  }
+  &__price{
+    margin-left: auto;
+  }
+  &__amount{
+    width: calc(100%/6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-less{
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &-value{
+      width: 5%;
+      padding: 6px 18px;
+      margin: 0 10px;
+      border-color: $btn_border;
+      border-style: solid;
+      font-family: "PT Root UI_Regular";
+      text-align: center;
+      font-size: 16px;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-more{
+      cursor: pointer;
+    }
+  }
+  &__delete{
+    &:hover{
+      cursor: pointer;
+      & :first-child{
+        fill:$active;
+      }
+    }
+  }
+}
