@@ -1,0 +1,411 @@
+%form_title{
+  font-size: 20px;
+  font-family: "PT Root UI_Bold";
+  color: $primary_font_color;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+%form_input{
+  transition: border-color 0.25s;
+  margin-bottom: 25px;
+  border: 2px solid $btn_border;
+  padding: 10px 14px 12px 14px;
+  color: $secondary_font_color;
+  box-sizing: border-box;
+  font-family: "PT Root UI_Regular";
+  font-size: 14px;
+  border-radius: 3px;
+  &:focus{
+    outline: none;
+    border-color: $active;
+  }
+  &::placeholder{
+    color: $secondary_font_color;
+  }
+}
+
+.main{
+  flex: 1 0 auto;
+  background-color: $bg_main;
+  &__wrapper{
+    max-width: 870px;
+    margin: 0 auto;
+  }
+  &__cart{
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 60px;
+  }
+  &__order-registration{
+    background-color: white;
+    padding: 35px 50px 58px 50px;
+    margin: 38px 0 88px 0;
+    border-radius: 5px;
+  }
+}
+
+.cart{
+  &__title{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.2;
+    width: 100%;
+    padding: 33px 40px 28px 45px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  &__items{
+    padding: 0 40px 0 45px;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+  }
+  &__item{
+    height: 99px;
+    border-top: 1px solid $otherwhite;
+    display: flex;
+    align-items: center;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px 0 65px;
+    height: 93px;
+    align-items: center;
+    background-color: #e3eaef;
+    border-radius: 0 0 5px 5px;
+    margin-top: 3px;
+  }
+  &__amount{
+    font-size: 18px;
+    font-family: "PT Root UI_Regular";
+    color: rgb(121, 132, 143);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  &__total{
+    color: $primary_font_color;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "PT Root UI_Bold";
+  }
+}
+
+.item{
+  &__image{
+    width: calc(100%/12);
+    margin-right: 15px;
+  }
+  &__content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  &__info{
+    width: 50%;
+    font-family: "PT Root UI_Regular";
+  }
+  &__name{
+    font-size: 16px;
+    color: $primary_font_color;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  &__code{
+    font-size: 14px;
+    color: $secondary_font_color;
+  }
+  &__price,&__price-total{
+    width: calc(100%/12);
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.167;
+    color: $primary_font_color;
+  }
+  &__price{
+    width: 25%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__amount{
+    width: calc(100%/6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    &-less{
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &-value{
+      width: 5%;
+      padding: 6px 18px;
+      margin: 0 10px;
+      border-color: $btn_border;
+      border-style: solid;
+      font-family: "PT Root UI_Regular";
+      text-align: center;
+      font-size: 16px;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-more{
+      cursor: pointer;
+    }
+  }
+  &__price-total{
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+  &__delete{
+    &:hover{
+      cursor: pointer;
+      & :first-child{
+        fill:$active;
+      }
+    }
+  }
+}
+
+.order-registration{
+  &__content{
+    width: calc(100%/8*5);
+    box-sizing: border-box;
+    padding-right: 35px;
+  }
+  &__title{
+    font-size: 36px;
+    color: $primary_font_color;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.2;
+    margin-bottom: 23px;
+  }
+  &__address{
+    width: 100%;
+  }
+  &__receiver{
+    width: 100%;
+  }
+  &__btn{
+    width: 100%;
+    color: white;
+    background-color: $active;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.167;
+    cursor: pointer;
+    margin-top: 11px;
+  }
+}
+
+.address{
+  &__title{
+    @extend %form_title;
+  }
+
+  &__primary,
+  &__secondary-office,
+  &__secondary-floor,
+  &__secondary-entrance,
+  &__comment{
+    @extend %form_input;
+  }
+  &__primary{
+    width: 100%;
+  }
+  &__secondary-content{
+    display: flex;
+  }
+  &__secondary-office,
+  &__secondary-floor,
+  &__secondary-entrance{
+    width: 23%;
+    box-sizing: border-box;
+    margin-right: 18px;
+  }
+  &__comment{
+    height: 110px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 0;
+  }
+
+}
+
+.receiver{
+  &__title{
+    @extend %form_title;
+    margin-top: 30px;
+  }
+  &__first-name,
+  &__last-name,
+  &__email,
+  &__phone{
+    @extend %form_input;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__cart{
+      margin: 40px 15px 0 15px;
+    }
+    &__order-registration{
+      margin: 38px 15px 88px 15px;
+      padding: 35px 32px 58px 32px;
+    }
+  }
+  .cart{
+    &__items{
+      padding: 0 30px;
+    }
+    &__info{
+      padding-left: 35px;
+    }
+  }
+  .item{
+    &__content{
+      width: calc(100%/12*5);
+      padding-left: 25px;
+    }
+    &__info{
+      width: 50%;
+    }
+    &__price,&__price-total{
+      padding: 0;
+      width: calc(100%/6);
+      display: flex;
+      justify-content: center;
+    }
+    &__price{
+      width: 25%;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: calc(100%/12*8);
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__cart{
+      margin-top: 15px;
+    }
+    &__order-registration{
+      margin-top: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+      margin-bottom: 50px;
+    }
+  }
+  .cart{
+    &__title{
+      font-size: 24px;
+      padding: 28px 25px 24px 25px;
+    }
+    &__items{
+      padding: 0 25px;
+    }
+    &__item{
+      padding: 20px 0 30px 0;
+      flex-wrap: wrap;
+      height: unset;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: normal;
+      justify-content: center;
+    }
+    &__amount{
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: unset;
+    }
+    &__total{
+      font-size: 20px;
+    }
+  }
+  .item{
+    &__image{
+      width: 25%;
+      margin: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    &__info{
+      width: 100%;
+      padding: 0;
+    }
+    &__price{
+      width: 100%;
+      margin-left: 0;
+      justify-content: normal;
+      margin-top: 6px;
+    }
+    &__amount{
+      width: 40%;
+      margin-left: auto;
+      padding-right: 45px;
+      padding-left: 0;
+    }
+    &__price-total{
+      display: none;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: 100%;
+    }
+    &__title{
+      font-size: 24px;
+    }
+    &__btn{
+      margin-top: 20px;
+    }
+  }
+  .address{
+    &__title{
+      font-size: 16px;
+    }
+    &__secondary-content{
+      flex-direction: column;
+    }
+    &__secondary-office,
+    &__secondary-floor,
+    &__secondary-entrance{
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .receiver{
+    &__title{
+      font-size: 16px;
+    }
+  }
+}
