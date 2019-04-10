@@ -99,9 +99,14 @@
     width: calc(100%/12);
     margin-right: 15px;
   }
+  &__content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
   &__info{
-    width: calc(100%/6);
-    padding-left: 15px;
+    width: 50%;
     font-family: "PT Root UI_Regular";
   }
   &__name{
@@ -121,10 +126,12 @@
     font-family: "PT Root UI_Bold";
     line-height: 1.167;
     color: $primary_font_color;
-    padding: 0 15px;
   }
   &__price{
+    width: 25%;
     margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
   }
   &__amount{
     width: calc(100%/6);
@@ -248,5 +255,157 @@
   &__phone{
     @extend %form_input;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__cart{
+      margin: 40px 15px 0 15px;
+    }
+    &__order-registration{
+      margin: 38px 15px 88px 15px;
+      padding: 35px 32px 58px 32px;
+    }
+  }
+  .cart{
+    &__items{
+      padding: 0 30px;
+    }
+    &__info{
+      padding-left: 35px;
+    }
+  }
+  .item{
+    &__content{
+      width: calc(100%/12*5);
+      padding-left: 25px;
+    }
+    &__info{
+      width: 50%;
+    }
+    &__price,&__price-total{
+      padding: 0;
+      width: calc(100%/6);
+      display: flex;
+      justify-content: center;
+    }
+    &__price{
+      width: 25%;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: calc(100%/12*8);
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__cart{
+      margin-top: 15px;
+    }
+    &__order-registration{
+      margin-top: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+      margin-bottom: 50px;
+    }
+  }
+  .cart{
+    &__title{
+      font-size: 24px;
+      padding: 28px 25px 24px 25px;
+    }
+    &__items{
+      padding: 0 25px;
+    }
+    &__item{
+      padding: 20px 0 30px 0;
+      flex-wrap: wrap;
+      height: unset;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: normal;
+      justify-content: center;
+    }
+    &__amount{
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: unset;
+    }
+    &__total{
+      font-size: 20px;
+    }
+  }
+  .item{
+    &__image{
+      width: 25%;
+      margin: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    &__info{
+      width: 100%;
+      padding: 0;
+    }
+    &__price{
+      width: 100%;
+      margin-left: 0;
+      justify-content: normal;
+      margin-top: 6px;
+    }
+    &__amount{
+      width: 40%;
+      margin-left: auto;
+      padding-right: 45px;
+      padding-left: 0;
+    }
+    &__price-total{
+      display: none;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: 100%;
+    }
+    &__title{
+      font-size: 24px;
+    }
+    &__btn{
+      margin-top: 20px;
+    }
+  }
+  .address{
+    &__title{
+      font-size: 16px;
+    }
+    &__secondary-content{
+      flex-direction: column;
+    }
+    &__secondary-office,
+    &__secondary-floor,
+    &__secondary-entrance{
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .receiver{
+    &__title{
+      font-size: 16px;
+    }
   }
 }
