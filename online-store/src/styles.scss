@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$clicked:#db2d25;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+@font-face {
+  font-family: 'PT Root UI_Bold';
+  src: url(assets/fonts/PT_Root_UI_Bold.woff) format('woff');
+  src: url(assets/fonts/PT_Root_UI_Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Root UI_Regular';
+  src: url(assets/fonts/PT_Root_UI_Regular.woff) format('woff');
+  src: url(assets/fonts/PT_Root_UI_Regular.woff2) format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+a{
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.black-bg{
+  background-color: rgba(0,0,0,0.3);
+  height: calc(100vh);
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+
+.btn{
+  &-default{
+
+  }
+  &-additional{
+    color: $primary_font_color;
+    border: 2px solid $btn_border;
+    cursor: pointer;
+    transition: 0.25s;
+    &:hover{
+      color: $active;
+      border-color: $active;
+    }
+    &:active{
+      color: $clicked;
+      border-color: $clicked;
+    }
+  }
+}
