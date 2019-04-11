@@ -1,0 +1,111 @@
+%nav-item{
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 12px;
+  font-family: 'PT Root UI_Bold';
+  margin-right: 30px;
+  padding: 20px 0 21px 0;
+  letter-spacing: 1.1px;
+}
+
+.nav{
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid $otherwhite;
+  &__content{
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu{
+    display: flex;
+    justify-content: center;
+    width: calc(100%/12*8);
+    padding-inline-start: 0;
+    margin: 0;
+    &-item{
+      @extend %nav-item;
+      &--active{
+        @extend %nav-item;
+        border-bottom: 3px solid $active;
+        padding-bottom: 15px;
+      }
+    }
+    &-item,&-item--active{
+      a{
+        color: $primary_font_color;
+        text-decoration: none;
+        &:hover{
+          color: $active;
+        }
+      }
+      &:last-child{
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__search{
+    display: flex;
+    width: calc(100%/12*4 - 42px);
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: $otherwhite;
+    align-items: center;
+    padding-left: 20px;
+    input {
+      width: 90%;
+      font-size: 16px;
+      font-family: 'PT Root UI_Regular';
+      height: 100%;
+      border: none;
+      padding: 0;
+      &:focus {
+        outline: none;
+        + .nav__search-icon :first-child{
+          fill:$active;
+        }
+      }
+
+    }
+    &-icon {
+      margin-right: 20px;
+      & :first-child{
+        transition: fill 0.25s;
+      }
+    }
+
+    &-close{
+      margin-right: 15px;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .nav{
+    position: absolute;
+    margin-top: 69px;
+    z-index: 1;
+    display: none;
+    &__menu{
+      display: none;
+    }
+    &__search{
+      width: 100%;
+      padding: 13px 0 13px 15px;
+      input{
+        width: 100%;
+        font-size: 14px;
+      }
+      &-icon{
+        display: none;
+      }
+      &-close{
+        display: block;
+      }
+    }
+  }
+}
