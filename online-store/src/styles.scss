@@ -6,6 +6,7 @@ $active:#f54732;
 $clicked:#db2d25;
 $bg_main:#f5f8fa;
 $btn_border:#e3e8f0;
+$dark_gray:#a1a8bd;
 
 @font-face {
   font-family: 'PT Root UI_Bold';
@@ -34,6 +35,24 @@ body {
 a{
   text-decoration: none;
   transition: color 0.25s;
+}
+
+input{
+  color: $primary_font_color;
+  font-family: "PT Root UI_Regular";
+  font-weight: 600;
+  &:hover{
+    border-color: $dark_gray;
+  }
+  &:focus{
+    outline: none;
+    border-color: #315ad5;
+  }
+  &::placeholder{
+    color: $dark_gray;
+    font-family: "PT Root UI_Regular";
+    font-weight: 100;
+  }
 }
 
 .black-bg{

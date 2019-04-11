@@ -6,12 +6,6 @@ $clicked:#db2d25;
 $bg_main:#f5f8fa;
 $btn_border:#e3e8f0;
 
-header {
-  background-color: white;
-  width: 100%;
-  z-index: 1;
-}
-
 %cart-count{
   margin-top: 3px;
   font-size: 11px;
@@ -24,12 +18,15 @@ header {
 }
 
 .header{
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid $otherwhite;
   &__content{
     max-width: 1170px;
     margin: auto;
     padding: 12px 0;
     display: flex;
-    border-bottom: 1px solid $otherwhite;
   }
 
   &__burger-menu{
