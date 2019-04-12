@@ -1,0 +1,150 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+.main {
+  &__pagination {
+    max-width: 1170px;
+    margin: 58px auto 98px auto;
+    background-color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+%page {
+  font-size: 14px;
+  font-family: "PT Root UI_Bold";
+  color: $primary_font_color;
+  padding: 15px 20px;
+}
+
+.pagination {
+  &__first-icon {
+    margin-right: 15px;
+    cursor: pointer;
+    & :nth-child(n + 2){
+      transition: fill 0.25s;
+    }
+    &:hover :nth-child(n + 2){
+      fill: $active;
+    }
+  }
+
+  &__prev-icon{
+    cursor: pointer;
+    & :last-child{
+      transition: fill 0.25s;
+    }
+    &:hover :last-child{
+      fill: $active;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    list-style: none;
+    width: 38%;
+    justify-content: space-around;
+  }
+  &__page {
+    @extend %page;
+    cursor: pointer;
+    transition: color 0.25s;
+    &:hover {
+      color: $active;
+    }
+    &--active {
+      @extend %page;
+      background-color: white;
+      border-radius: 100%;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+      color: $active;
+    }
+  }
+
+  &__next-icon{
+    cursor: pointer;
+    margin-left: 26px;
+    & :last-child{
+      transition: fill 0.25s;
+    }
+    &:hover :last-child{
+      fill: $active;
+    }
+  }
+
+  &__last-icon{
+    margin-left: 15px;
+    cursor: pointer;
+    & :nth-child(n + 2){
+      transition: fill 0.25s;
+    }
+    &:hover :nth-child(n + 2){
+      fill: $active;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__pagination{
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .pagination{
+    &__first-icon{
+      margin-left: 10px;
+    }
+    &__pages{
+      width: 66.7%;
+    }
+    &__last-icon{
+      margin-right: 10px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__pagination{
+      margin-top: 38px;
+      height: 80px;
+      padding: 0 24px;
+    }
+  }
+
+  .pagination{
+    &__first-icon{
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    &__prev-icon{
+      margin-right: 10px;
+    }
+    &__pages{
+      width: auto;
+    }
+    &__page{
+      display: none;
+      &--active{
+        padding: 10px 15px;
+      }
+    }
+    &__next-icon{
+      margin-left: 10px;
+    }
+    &__last-icon{
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}
