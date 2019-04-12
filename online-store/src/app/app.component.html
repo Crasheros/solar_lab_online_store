@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
-<app-nav></app-nav>
+<app-header (showBlackBg)="toggleBlackBg(true)"></app-header>
+<app-nav [navBarState]="navBarState" (hideBlackBg)="toggleBlackBg(false)"></app-nav>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-<div class="black-bg"></div>
+<div class="black-bg"  [ngStyle]="{'display': navBarState ? 'block' : 'none'}"></div>
