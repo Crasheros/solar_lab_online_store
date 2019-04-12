@@ -14,6 +14,7 @@ import { FilterComponent } from './pages/catalog/filter/filter.component';
 import { PaginationComponent } from './pages/catalog/pagination/pagination.component';
 import { ProductsWrapperComponent } from './pages/catalog/products-wrapper/products-wrapper.component';
 import { ProductsBannerComponent } from './pages/catalog/products-banner/products-banner.component';
+import { ProductComponent } from './pages/catalog/product/product.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductsBannerComponent } from './pages/catalog/products-banner/product
     FilterComponent,
     PaginationComponent,
     ProductsWrapperComponent,
-    ProductsBannerComponent
+    ProductsBannerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
