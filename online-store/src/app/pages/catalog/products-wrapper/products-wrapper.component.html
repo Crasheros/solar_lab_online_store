@@ -1,0 +1,10 @@
+<div class="main__products">
+  <div class="main__products-wrapper">
+    <div *ngFor="let product of products" class="main__product">
+      <app-product [product]="product"></app-product>
+    </div>
+    <div class="main__products-banner">
+      <app-products-banner></app-products-banner>
+    </div>
+  </div>
+</div>

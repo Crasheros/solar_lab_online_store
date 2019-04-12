@@ -148,6 +148,15 @@ $btn_border:#e3e8f0;
   }
 }
 
+.black-bg{
+  background-color: rgba(0,0,0,0.3);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  display: none;
+  top:0;
+}
+
 @media screen and (max-width: 1199px) {
   .footer{
     &__content{
