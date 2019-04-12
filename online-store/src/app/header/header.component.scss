@@ -22,6 +22,7 @@ $btn_border:#e3e8f0;
   width: 100%;
   z-index: 1;
   border-bottom: 1px solid $otherwhite;
+  position: relative;
   &__content{
     max-width: 1170px;
     margin: auto;
@@ -31,9 +32,10 @@ $btn_border:#e3e8f0;
 
   &__burger-menu{
     width: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
     background-color: white;
-    padding-top: 15px;
+    padding-top: 25px;
     display: none;
     &--active{
       @extend .header__burger-menu;
