@@ -1,0 +1,28 @@
+<nav [ngClass]="navBarState ? 'nav--active' : 'nav'">
+  <div class="nav__content">
+    <ul class="nav__menu">
+      <li class="nav__menu-item--active"><a href="#">стулья и кресла</a></li>
+      <li class="nav__menu-item"><a href="#">кровати и матрасы</a></li>
+      <li class="nav__menu-item"><a href="#">шкафы и комоды</a></li>
+      <li class="nav__menu-item"><a href="#">мебель для кухни</a></li>
+      <li class="nav__menu-item"><a href="#">товары для дома</a></li>
+    </ul>
+    <div class="nav__search">
+      <input type="text" [(ngModel)]="filter.name" placeholder="Поиск по товарам">
+      <svg class="nav__search-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13">
+        <path fill="#343e5c" data-name="Иконка поиска" transform="translate(-1254 -112)"
+              d="M1266.61,124.61a1.28,1.28,0,0,1-1.81,0l-2.64-2.644a5.389,5.389,0,1,1,1.81-1.812l2.64,2.645A1.281,1.281,0,0,1,1266.61,124.61Zm-4.88-9.593a3.332,3.332,0,1,0,0,4.714A3.33,3.33,0,0,0,1261.73,115.017Z"/>
+      </svg>
+      <svg (click)="hideBlackBg.emit()" class="nav__search-close" xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+        <path fill="#a1a8bd" d="M6 5l4 4v1H9L5 6l-4 4H0V9l4-4-4-4V0h1l4 4 4-4h1v1z" data-name="Фигура 503"/>
+      </svg>
+      <ul *ngIf="filter.name !== ''" class="nav__search-options">
+        <li *ngFor="let product of products | filterBy: filter " class="nav__search-option">
+          {{ product.name }}
+        </li>
+        <li *ngIf="(products | filterBy: filter).length === 0" class="nav__search-option">Товары не найдены</li>
+      </ul>
+    </div>
+  </div><!-- END:nav__content -->
+
+</nav>
