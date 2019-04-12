@@ -12,6 +12,8 @@ import { BannerBigComponent } from './pages/catalog/banner-big/banner-big.compon
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { FilterComponent } from './pages/catalog/filter/filter.component';
 import { PaginationComponent } from './pages/catalog/pagination/pagination.component';
+import { ProductsWrapperComponent } from './pages/catalog/products-wrapper/products-wrapper.component';
+import { ProductsBannerComponent } from './pages/catalog/products-banner/products-banner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PaginationComponent } from './pages/catalog/pagination/pagination.compo
     BannerBigComponent,
     CatalogComponent,
     FilterComponent,
-    PaginationComponent
+    PaginationComponent,
+    ProductsWrapperComponent,
+    ProductsBannerComponent
   ],
   imports: [
     BrowserModule,

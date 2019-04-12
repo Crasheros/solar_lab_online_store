@@ -1,0 +1,142 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+.main {
+  &__products {
+    max-width: 1170px;
+    margin: 0 auto;
+    &-wrapper {
+      margin: 0 -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-banner {
+      width: 50%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+  }
+  &__product {
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}
+
+
+.product {
+  &__content {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.25s;
+    }
+  }
+  &__img {
+    width: 75%;
+    height: 232px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    font-size: 16px;
+    font-family: "PT Root UI_Regular";
+    line-height: 1.25;
+    color: $primary_font_color;
+    font-weight: 600;
+    margin-bottom: 13px;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-family: "PT Root UI_Bold";
+    line-height: 0.833;
+    color: $primary_font_color;
+  }
+
+  &__cart-btn {
+    font-size: 14px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.2;
+    color: $primary_font_color;
+    padding: 8px 16px;
+    border: 2px solid $btn_border;
+    border-radius: 3px;
+    margin: 25px 0 40px 0;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__products-wrapper{
+      padding: 0 15px;
+    }
+    &__product{
+      width: 33.3%;
+    }
+    &__products-banner{
+      width: 100%;
+      height: 415px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__product{
+      width: 100%;
+      padding: 8px 15px;
+    }
+    &__products-banner{
+      height: 330px;
+      padding: 8px 15px;
+    }
+  }
+
+  .product{
+    &__content{
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 0 15px 0;
+    }
+    &__img{
+      width: 42%;
+      height: unset;
+      padding-right: 6px;
+      img{
+        width: 100%;
+      }
+    }
+    &__info{
+      align-items: normal;
+    }
+    &__name{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__price{
+      font-size: 20px;
+    }
+    &__cart-btn{
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+}
