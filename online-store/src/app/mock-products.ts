@@ -3,7 +3,7 @@ import {Product} from "./product";
 export const Products: Product[] = [
   {
     id: 0,
-    name: 'Cтул Ханна',
+    name: 'Стул Ханна',
     price: 9399,
     code: 1049556,
     images: ['chair_hanna0.jpg', 'chair_hanna1.jpg'],
@@ -12,7 +12,7 @@ export const Products: Product[] = [
   },
   {
     id: 1,
-    name: 'Cтул Эдинбург',
+    name: 'Стул Эдинбург',
     price: 5690,
     code: 1049557,
     images: ['chair_hanna0.jpg', 'chair_hanna1.jpg'],
@@ -21,7 +21,7 @@ export const Products: Product[] = [
   },
   {
     id: 2,
-    name: 'Cтул Сольер',
+    name: 'Стул Сольер',
     price: 2390,
     code: 1049558,
     images: ['chair_hanna0.jpg', 'chair_hanna1.jpg'],
@@ -30,7 +30,7 @@ export const Products: Product[] = [
   },
   {
     id: 3,
-    name: 'Cтул Стелла',
+    name: 'Стул Стелла',
     price: 3500,
     code: 1049559,
     images: ['chair_hanna0.jpg', 'chair_hanna1.jpg'],
@@ -39,7 +39,7 @@ export const Products: Product[] = [
   },
   {
     id: 4,
-    name: 'Cтул Бланес',
+    name: 'Стул Бланес',
     price: 4300,
     code: 1049560,
     images: ['chair_hanna0.jpg', 'chair_hanna1.jpg'],

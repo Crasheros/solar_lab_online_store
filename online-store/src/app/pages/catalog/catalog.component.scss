@@ -1,0 +1,341 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+.main {
+  flex: 1 0 auto;
+  background-color: $bg_main;
+
+
+  &__products {
+    max-width: 1170px;
+    margin: 0 auto;
+    &-wrapper {
+      margin: 0 -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-banner {
+      width: 50%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+  }
+  &__product {
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  &__pagination {
+    max-width: 1170px;
+    margin: 58px auto 98px auto;
+    background-color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+%page {
+  font-size: 14px;
+  font-family: "PT Root UI_Bold";
+  color: $primary_font_color;
+  padding: 15px 20px;
+}
+
+.product {
+  &__content {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.25s;
+    }
+  }
+  &__img {
+    width: 75%;
+    height: 232px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    font-size: 16px;
+    font-family: "PT Root UI_Regular";
+    line-height: 1.25;
+    color: $primary_font_color;
+    font-weight: 600;
+    margin-bottom: 13px;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-family: "PT Root UI_Bold";
+    line-height: 0.833;
+    color: $primary_font_color;
+  }
+
+  &__cart-btn {
+    font-size: 14px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.2;
+    color: $primary_font_color;
+    padding: 8px 16px;
+    border: 2px solid $btn_border;
+    border-radius: 3px;
+    margin: 25px 0 40px 0;
+    cursor: pointer;
+  }
+}
+
+.products-banner {
+  &__content {
+    background-image: url("../../../assets/images/products_banner.jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__text {
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    width: 50%;
+    color: $primary_font_color;
+    line-height: 1.2;
+    display: flex;
+    justify-self: center;
+    margin-left: 7%;
+  }
+  &__btn {
+    font-size: 14px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.2;
+    width: calc(100% / 6);
+    cursor: pointer;
+    border: 2px solid #a8b8c6;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 8px 10px;
+    margin-left: 7%;
+  }
+}
+
+.pagination {
+  &__first-icon {
+    margin-right: 15px;
+    cursor: pointer;
+    & :nth-child(n + 2){
+      transition: fill 0.25s;
+    }
+    &:hover :nth-child(n + 2){
+      fill: $active;
+    }
+  }
+
+  &__prev-icon{
+    cursor: pointer;
+    & :last-child{
+      transition: fill 0.25s;
+    }
+    &:hover :last-child{
+      fill: $active;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    list-style: none;
+    width: 38%;
+    justify-content: space-around;
+  }
+  &__page {
+    @extend %page;
+    cursor: pointer;
+    transition: color 0.25s;
+    &:hover {
+      color: $active;
+    }
+    &--active {
+      @extend %page;
+      background-color: white;
+      border-radius: 100%;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+      color: $active;
+    }
+  }
+
+  &__next-icon{
+    cursor: pointer;
+    margin-left: 26px;
+    & :last-child{
+      transition: fill 0.25s;
+    }
+    &:hover :last-child{
+      fill: $active;
+    }
+  }
+
+  &__last-icon{
+    margin-left: 15px;
+    cursor: pointer;
+    & :nth-child(n + 2){
+      transition: fill 0.25s;
+    }
+    &:hover :nth-child(n + 2){
+      fill: $active;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__products-wrapper{
+      padding: 0 15px;
+    }
+    &__product{
+      width: 33.3%;
+    }
+    &__products-banner{
+      width: 100%;
+      height: 415px;
+    }
+    &__pagination{
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .products-banner{
+    &__content{
+      background-image: url("../../../assets/images/products_banner_750.jpg");
+    }
+    &__text{
+      width: 45%;
+      margin-left: 5%;
+    }
+    &__btn{
+      margin-left: 5%;
+      margin-top: 25px;
+      padding: 8px 16px;
+      width: fit-content;
+    }
+  }
+
+  .pagination{
+    &__first-icon{
+      margin-left: 10px;
+    }
+    &__pages{
+      width: 66.7%;
+    }
+    &__last-icon{
+      margin-right: 10px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__product{
+      width: 100%;
+      padding: 8px 15px;
+    }
+    &__products-banner{
+      height: 330px;
+      padding: 8px 15px;
+    }
+    &__pagination{
+      margin-top: 38px;
+      height: 80px;
+      padding: 0 24px;
+    }
+  }
+
+  .product{
+    &__content{
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 0 15px 0;
+    }
+    &__img{
+      width: 42%;
+      height: unset;
+      padding-right: 6px;
+      img{
+        width: 100%;
+      }
+    }
+    &__info{
+      align-items: normal;
+    }
+    &__name{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__price{
+      font-size: 20px;
+    }
+    &__cart-btn{
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+  .products-banner{
+    &__content{
+      background-image: url("../../../assets/images/products_banner_320.jpg");
+    }
+    &__text{
+      font-size: 24px;
+      margin-left: 8%;
+      width: 70%;
+    }
+    &__btn{
+      margin-left: 8%;
+      border-color: #98a7b2;
+    }
+  }
+  .pagination{
+    &__first-icon{
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    &__prev-icon{
+      margin-right: 10px;
+    }
+    &__pages{
+      width: auto;
+    }
+    &__page{
+      display: none;
+      &--active{
+        padding: 10px 15px;
+      }
+    }
+    &__next-icon{
+      margin-left: 10px;
+    }
+    &__last-icon{
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}
