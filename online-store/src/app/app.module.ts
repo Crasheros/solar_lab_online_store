@@ -15,6 +15,9 @@ import { PaginationComponent } from './pages/catalog/pagination/pagination.compo
 import { ProductsWrapperComponent } from './pages/catalog/products-wrapper/products-wrapper.component';
 import { ProductsBannerComponent } from './pages/catalog/products-banner/products-banner.component';
 import { ProductComponent } from './pages/catalog/product/product.component';
+import { ProductCardComponent } from './pages/product-card/product-card.component';
+import { CarouselComponent } from './pages/product-card/carousel/carousel.component';
+import { BreadcrumbsComponent } from './pages/product-card/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ProductComponent } from './pages/catalog/product/product.component';
     PaginationComponent,
     ProductsWrapperComponent,
     ProductsBannerComponent,
-    ProductComponent
+    ProductComponent,
+    ProductCardComponent,
+    CarouselComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,

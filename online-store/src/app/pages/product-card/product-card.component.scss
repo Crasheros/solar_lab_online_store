@@ -1,0 +1,288 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+$secondary_font_color_main:rgb(130, 138, 162);
+
+.main{
+  flex: 1 0 auto;
+  background-color: $bg_main;
+  &__wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 118px;
+  }
+  &__container{
+    background-color: white;
+    display: flex;
+    padding: 36px 0 47px 0;
+    flex-wrap: wrap;
+  }
+  &__content{
+    width: 100%;
+    display: flex;
+  }
+  &__carousel{
+    width: calc(100%/6);
+    box-sizing: border-box;
+    padding-right: 30px;
+  }
+  &__product-image{
+    width: 33.3%;
+  }
+  &__product-info{
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+    padding: 8px 3px 8px 15px;
+    box-sizing: border-box;
+    margin-left: calc(100%/12);
+  }
+  &__product-description{
+    margin-left: calc(100%/6);
+    margin-right: calc(100%/12);
+    margin-top: 5px;
+    list-style: none;
+    width: 90%;
+    &-item{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.product{
+  &__name{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    margin-bottom: 6px;
+  }
+  &__code{
+    color: $secondary_font_color_main;
+    font-family: "PT Root UI_Regular";
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
+  &__available{
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    &-icon{
+      margin-right: 8px;
+    }
+    &-text{
+      color: $primary_font_color;
+      font-family: "PT Root UI_Regular";
+      font-size: 16px;
+    }
+  }
+  &__purchase{
+    background-color: $bg_main;
+    padding: 27px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  &__content{
+    width: 100%;
+    display: flex;
+  }
+  &__price{
+    line-height: 0.7;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    font-size: 30px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  &__amount{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    &-less{
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &-value{
+      width: 5%;
+      padding: 6px 18px;
+      margin: 0 10px;
+      border-color: $btn_border;
+      border-style: solid;
+      font-family: "PT Root UI_Regular";
+      text-align: center;
+      font-size: 16px;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-more{
+      cursor: pointer;
+    }
+  }
+  &__buy-btn{
+    width: 100%;
+    background-color: $active;
+    border-radius: 5px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 20px 0;
+    cursor: pointer;
+  }
+  &__free-delivery{
+    width: 100%;
+    display: flex;
+    &-text{
+      font-size: 16px;
+      line-height: 1.2;
+      color: $secondary_font_color_main;
+      font-family: "PT Root UI_Regular";
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+}
+
+.description{
+  &__title{
+    font-family: "PT Root UI_Bold";
+    font-size: 18px;
+    color: $primary_font_color;
+    margin-bottom: 8px;
+    display: block;
+  }
+  &__text{
+    font-family: "PT Root UI_Regular";
+    font-size: 16px;
+    color: $secondary_font_color_main;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__wrapper{
+      padding:20px 15px 65px 15px;
+    }
+    &__container{
+      padding: 75px 33px 15px 33px;
+    }
+    &__content{
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &__carousel{
+      padding-right: 0;
+      width: 10%
+    }
+    &__product-image{
+      width: 50%;
+      margin-left: 10%;
+      padding-left: 15px;
+    }
+    &__product-info{
+      width: 100%;
+      padding: 6px 0 45px 0;
+      margin-left: 0;
+    }
+    &__product-description{
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      &-item{
+        margin-bottom: 28px;
+      }
+    }
+  }
+  .product{
+    &__available{
+      padding-bottom: 55px;
+    }
+    &__purchase{
+      align-items: center;
+    }
+    &__content{
+      width: calc(50% + 15px);
+    }
+    &__buy-btn{
+      width: calc(50% + 15px);
+    }
+    &__free-delivery{
+      width: calc(50% + 15px);
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__wrapper{
+      padding-top: 22px;
+    }
+    &__container{
+      padding: 30px 0 10px 0;
+      margin-bottom: 48px;
+    }
+    &__product-image{
+      order: -1;
+      width: 100%;
+      margin-left: 0;
+      padding: 0 15px;
+      img{
+        width: 100%;
+      }
+    }
+    &__carousel{
+      width: 100%;
+    }
+    &__product-info{
+      padding: 6px 24px 35px 24px;
+    }
+    &__product-description{
+      padding: 0 24px;
+    }
+  }
+  .product{
+    &__name{
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &__available{
+      padding: 0 0 35px 0;
+    }
+    &__purchase{
+      padding: 27px 23px;
+    }
+    &__content{
+      flex-direction: column;
+    }
+    &__price{
+      width: 100%;
+      font-size: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__amount{
+      width: 100%;
+      padding-left: 0;
+      justify-content: center;
+    }
+    &__buy-btn{
+      margin: 26px 0;
+      width: 100%;
+    }
+    &__free-delivery{
+      width: calc(100% + 10px);
+    }
+  }
+}
