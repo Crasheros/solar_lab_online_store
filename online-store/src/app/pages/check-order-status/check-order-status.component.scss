@@ -1,0 +1,292 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+$secondary_font_color_main:rgb(120, 128, 153);
+
+.main {
+  flex: 1 0 auto;
+  background-color: $bg_main;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  &__wrapper{
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+}
+
+.check-status{
+  &__title{
+    margin-bottom: 43px;
+    font-size: 36px;
+    color: $primary_font_color;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+  }
+  &__content{
+    background-color: white;
+    border-radius: 5px;
+    padding: 33px 37px 60px 37px;
+  }
+  &__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $otherwhite;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  &__info{
+    width: 50%;
+  }
+  &__name{
+    &-content{
+      color: $primary_font_color;
+      font-size: 20px;
+      font-family: "PT Root UI_Bold";
+      line-height: 1.05;
+      display: flex;
+      margin-bottom: 12px;
+    }
+    &-text{
+      margin-right: 5px;
+    }
+  }
+  &__date{
+    &-content{
+      color: $secondary_font_color;
+      font-family: "PT Root UI_Regular";
+      font-size: 16px;
+      line-height: 1.313;
+      display: flex;
+    }
+    &-text{
+      margin-right: 5px;
+    }
+  }
+  &__btn{
+    color: $active;
+    font-size: 16px;
+    line-height: 1.313;
+    font-family: "PT Root UI_Bold";
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: fit-content;
+    text-decoration: none;
+  }
+  &__address,&__receiver{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stages{
+  &__numbers{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__line{
+    width: 95%;
+    height: 2px;
+    background-color: $secondary_font_color;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  &__number{
+    z-index: 1;
+    width: 31px;
+    height: 31px;
+
+    &--active{
+      z-index: 1;
+      width: 31px;
+      height: 31px;
+    }
+
+    &-icon{
+      stroke: $secondary_font_color;
+      stroke-width: 2px;
+      fill: white;
+      &--active{
+        stroke: $primary_font_color;
+        stroke-width: 2px;
+        fill:$primary_font_color;
+      }
+    }
+
+    &-text{
+      font-size: 14px;
+      font-family: "PT Root UI_Bold";
+      fill: $secondary_font_color;
+      &--active{
+        font-size: 14px;
+        font-family: "PT Root UI_Bold";
+        fill: white;
+      }
+    }
+  }
+  &__info{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: "PT Root UI_Regular";
+    line-height: 1.313;
+    color: $secondary_font_color_main;
+    font-weight: 500;
+    & :nth-child(2){
+      padding-right: 40px;
+    }
+  }
+  &__name--active{
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+  }
+}
+
+.cart{
+  &__total{
+    font-size: 16px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.313;
+    margin-top: 55px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $otherwhite;
+  }
+  &__items{
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+  }
+}
+
+.address{
+  &__title{
+    font-size: 20px;
+    color: $primary_font_color;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.05;
+    margin-bottom: 12px;
+    margin-top: 30px;
+  }
+  &__value{
+    font-size: 16px;
+    font-family: "PT Root UI_Regular";
+    color: rgb(120, 128, 153);
+    line-height: 1.313;
+    &-country{
+      font-size: 16px;
+      font-family: "PT Root UI_Regular";
+      color: $secondary_font_color_main;
+      line-height: 1.313;
+    }
+  }
+}
+
+.receiver{
+  &__title{
+    font-size: 20px;
+    color: $primary_font_color;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.05;
+    margin-bottom: 12px;
+    margin-top: 30px;
+  }
+  &__name,&__email,&__phone{
+    font-size: 16px;
+    font-family: "PT Root UI_Regular";
+    color: $secondary_font_color_main;
+    line-height: 1.313;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__wrapper{
+      max-width: 595px;
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    &__check-status{
+      padding: 0 15px;
+    }
+  }
+
+  .check-status{
+    &__title{
+      font-size: 24px;
+      width:80%;
+      text-align: center;
+      margin-left: 10%;
+      margin-bottom: 30px;
+    }
+    &__content{
+      padding: 33px 22px 55px 22px;
+    }
+    &__header{
+      flex-direction: column;
+    }
+    &__info{
+      width: 100%;
+    }
+    &__btn{
+      justify-content: normal;
+      margin-top: 10px;
+    }
+    &__stages{
+      display: flex;
+      align-items: center;
+    }
+    &__cart{
+      margin-top: -20px;
+    }
+  }
+
+  .stages{
+    &__numbers{
+      margin-right: 10px;
+    }
+    &__line{
+      display: none;
+    }
+    &__number{
+      display: none;
+    }
+    &__info{
+      margin-top: 0;
+    }
+    &__name{
+      display: none;
+    }
+  }
+
+  .address{
+    &__title{
+      font-size: 16px;
+    }
+  }
+
+  .receiver{
+    &__title{
+      font-size: 16px;
+    }
+  }
+}

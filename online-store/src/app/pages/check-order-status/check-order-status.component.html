@@ -1,0 +1,68 @@
+<main class="main">
+  <div class="main__wrapper">
+    <div class="main__check-status">
+      <div class="check-status__title">Проверить статус заказа</div>
+      <div class="check-status__content">
+        <div class="check-status__header">
+          <div class="check-status__info">
+            <div class="check-status__name-content">
+              <div class="check-status__name-text">Заказ</div>
+              <div class="check-status__name-value">ARU04889781</div>
+            </div>
+            <div class="check-status__date-content">
+              <div class="check-status__date-text">Дата заказа:</div>
+              <div class="check-status__date-value">7 февраля 2019</div>
+            </div>
+          </div>
+
+          <a href="../check_order_auth/index.html" class="check-status__btn">Проверить другой заказ</a>
+        </div>
+        <div class="check-status__stages">
+          <div class="stages__numbers">
+            <div class="stages__line"></div>
+            <svg class="stages__number--active" xmlns="http://www.w3.org/2000/svg">
+              <path class="stages__number-icon--active"
+                    d="M15.000,1.000 C22.732,1.000 29.000,7.268 29.000,15.000 C29.000,22.732 22.732,29.000 15.000,29.000 C7.268,29.000 1.000,22.732 1.000,15.000 C1.000,7.268 7.268,1.000 15.000,1.000 Z"/>
+              <text class="stages__number-text--active" x="11" y="20">1</text>
+            </svg>
+            <svg class="stages__number" xmlns="http://www.w3.org/2000/svg">
+              <path class="stages__number-icon"
+                    d="M15.000,1.000 C22.732,1.000 29.000,7.268 29.000,15.000 C29.000,22.732 22.732,29.000 15.000,29.000 C7.268,29.000 1.000,22.732 1.000,15.000 C1.000,7.268 7.268,1.000 15.000,1.000 Z"/>
+              <text class="stages__number-text" x="11" y="20">2</text>
+            </svg>
+            <svg class="stages__number" xmlns="http://www.w3.org/2000/svg">
+              <path class="stages__number-icon"
+                    d="M15.000,1.000 C22.732,1.000 29.000,7.268 29.000,15.000 C29.000,22.732 22.732,29.000 15.000,29.000 C7.268,29.000 1.000,22.732 1.000,15.000 C1.000,7.268 7.268,1.000 15.000,1.000 Z"/>
+              <text class="stages__number-text" x="11" y="20">3</text>
+            </svg>
+          </div>
+
+          <div class="stages__info">
+            <span class="stages__name--active">Подтверждение</span>
+            <span class="stages__name">Готовится к отправке</span>
+            <span class="stages__name">Отправлен</span>
+          </div>
+        </div>
+        <div class="check-status__cart">
+          <div class="cart__total">3 товара</div>
+          <ul class="cart__items">
+            <app-check-order-product></app-check-order-product>
+            <app-check-order-product></app-check-order-product>
+            <app-check-order-product></app-check-order-product>
+          </ul>
+        </div>
+        <div class="check-status__address">
+          <span class="address__title">Адрес доставки</span>
+          <span class="address__value">Севастополь, Победы пр-кт, д. 2А</span>
+          <span class="address__value-country">Россия</span>
+        </div>
+        <div class="check-status__receiver">
+          <span class="receiver__title">Получатель</span>
+          <span class="receiver__name">Иван Иванов</span>
+          <span class="receiver__email">ivanov@gmail.com</span>
+          <span class="receiver__phone">+7 (978) 123-45-67</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
