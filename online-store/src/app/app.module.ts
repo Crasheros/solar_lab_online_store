@@ -23,6 +23,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartWrapperComponent } from './pages/cart/cart-wrapper/cart-wrapper.component';
 import { OrderRegistrationComponent } from './pages/cart/order-registration/order-registration.component';
 import { CartProductComponent } from './pages/cart/cart-product/cart-product.component';
+import { CheckOrderAuthComponent } from './pages/check-order-auth/check-order-auth.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CartProductComponent } from './pages/cart/cart-product/cart-product.com
     CartComponent,
     CartWrapperComponent,
     OrderRegistrationComponent,
-    CartProductComponent
+    CartProductComponent,
+    CheckOrderAuthComponent
   ],
   imports: [
     BrowserModule,
