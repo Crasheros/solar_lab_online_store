@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Products} from '../mock-products';
+import {Products} from '../../mock-products';
 
 @Component({
   selector: 'app-nav',
