@@ -1,0 +1,10 @@
+$bg_main:#f5f8fa;
+
+.main{
+  flex: 1 0 auto;
+  background-color: $bg_main;
+  &__wrapper{
+    max-width: 870px;
+    margin: 0 auto;
+  }
+}

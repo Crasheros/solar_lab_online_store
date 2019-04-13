@@ -1,0 +1,249 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+.main{
+  &__cart{
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 60px;
+  }
+}
+
+.cart{
+  &__title{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.2;
+    width: 100%;
+    padding: 33px 40px 28px 45px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  &__items{
+    padding: 0 40px 0 45px;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+  }
+  &__item{
+    height: 99px;
+    border-top: 1px solid $otherwhite;
+    display: flex;
+    align-items: center;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px 0 65px;
+    height: 93px;
+    align-items: center;
+    background-color: #e3eaef;
+    border-radius: 0 0 5px 5px;
+    margin-top: 3px;
+  }
+  &__amount{
+    font-size: 18px;
+    font-family: "PT Root UI_Regular";
+    color: rgb(121, 132, 143);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  &__total{
+    color: $primary_font_color;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "PT Root UI_Bold";
+  }
+}
+
+.item{
+  &__image{
+    width: calc(100%/12);
+    margin-right: 15px;
+  }
+  &__content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  &__info{
+    width: 50%;
+    font-family: "PT Root UI_Regular";
+  }
+  &__name{
+    font-size: 16px;
+    color: $primary_font_color;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  &__code{
+    font-size: 14px;
+    color: $secondary_font_color;
+  }
+  &__price,&__price-total{
+    width: calc(100%/12);
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.167;
+    color: $primary_font_color;
+  }
+  &__price{
+    width: 25%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__amount{
+    width: calc(100%/6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    &-less{
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &-value{
+      width: 5%;
+      padding: 6px 18px;
+      margin: 0 10px;
+      border-color: $btn_border;
+      border-style: solid;
+      font-family: "PT Root UI_Regular";
+      text-align: center;
+      font-size: 16px;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-more{
+      cursor: pointer;
+    }
+  }
+  &__price-total{
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+  &__delete{
+    &:hover{
+      cursor: pointer;
+      & :first-child{
+        fill:$active;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__cart{
+      margin: 40px 15px 0 15px;
+    }
+  }
+  .cart{
+    &__items{
+      padding: 0 30px;
+    }
+    &__info{
+      padding-left: 35px;
+    }
+  }
+  .item{
+    &__content{
+      width: calc(100%/12*5);
+      padding-left: 25px;
+    }
+    &__info{
+      width: 50%;
+    }
+    &__price,&__price-total{
+      padding: 0;
+      width: calc(100%/6);
+      display: flex;
+      justify-content: center;
+    }
+    &__price{
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__cart{
+      margin-top: 15px;
+    }
+  }
+  .cart{
+    &__title{
+      font-size: 24px;
+      padding: 28px 25px 24px 25px;
+    }
+    &__items{
+      padding: 0 25px;
+    }
+    &__item{
+      padding: 20px 0 30px 0;
+      flex-wrap: wrap;
+      height: unset;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: normal;
+      justify-content: center;
+    }
+    &__amount{
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: unset;
+    }
+    &__total{
+      font-size: 20px;
+    }
+  }
+  .item{
+    &__image{
+      width: 25%;
+      margin: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    &__info{
+      width: 100%;
+      padding: 0;
+    }
+    &__price{
+      width: 100%;
+      margin-left: 0;
+      justify-content: normal;
+      margin-top: 6px;
+    }
+    &__amount{
+      width: 40%;
+      margin-left: auto;
+      padding-right: 45px;
+      padding-left: 0;
+    }
+    &__price-total{
+      display: none;
+    }
+  }
+}
