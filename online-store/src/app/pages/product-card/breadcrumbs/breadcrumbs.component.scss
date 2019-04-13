@@ -1,0 +1,50 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+$secondary_font_color_main:rgb(130, 138, 162);
+
+.main{
+  &__breadcrumbs{
+    margin-bottom: 26px;
+  }
+}
+
+.breadcrumbs{
+  &__main-page,&__catalog{
+    color: $secondary_font_color_main;
+    text-decoration: none;
+    font-family: "PT Root UI_Regular";
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  &__divider{
+    margin: 0 3px;
+  }
+  &__product{
+    display: inline-block;
+    font-family: "PT Root UI_Regular";
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary_font_color;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__breadcrumbs{
+      margin:0 0 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__breadcrumbs{
+      margin:0 0 22px 0;
+    }
+  }
+}
