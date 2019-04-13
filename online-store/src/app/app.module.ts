@@ -22,6 +22,7 @@ import { SpinnerComponent } from './common/spinner/spinner.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CartWrapperComponent } from './pages/cart/cart-wrapper/cart-wrapper.component';
 import { OrderRegistrationComponent } from './pages/cart/order-registration/order-registration.component';
+import { CartProductComponent } from './pages/cart/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { OrderRegistrationComponent } from './pages/cart/order-registration/orde
     SpinnerComponent,
     CartComponent,
     CartWrapperComponent,
-    OrderRegistrationComponent
+    OrderRegistrationComponent,
+    CartProductComponent
   ],
   imports: [
     BrowserModule,

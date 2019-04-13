@@ -6,5 +6,24 @@ $bg_main:#f5f8fa;
   &__wrapper{
     max-width: 870px;
     margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 88px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__wrapper{
+      padding-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__wrapper{
+      padding-top: 15px;
+      padding-bottom: 50px;
+    }
   }
 }
