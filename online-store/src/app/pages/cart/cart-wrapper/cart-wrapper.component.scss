@@ -1,0 +1,98 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+.main{
+  &__cart{
+    background-color: white;
+    border-radius: 5px;
+  }
+}
+
+.cart{
+  &__title{
+    font-size: 36px;
+    font-family: "PT Root UI_Bold";
+    color: $primary_font_color;
+    line-height: 1.2;
+    width: 100%;
+    padding: 33px 40px 28px 45px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  &__items{
+    padding: 0 40px 0 45px;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px 0 65px;
+    height: 93px;
+    align-items: center;
+    background-color: #e3eaef;
+    border-radius: 0 0 5px 5px;
+    margin-top: 3px;
+  }
+  &__amount{
+    font-size: 18px;
+    font-family: "PT Root UI_Regular";
+    color: rgb(121, 132, 143);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  &__total{
+    color: $primary_font_color;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "PT Root UI_Bold";
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__cart{
+      margin: 0 15px;
+    }
+  }
+  .cart{
+    &__items{
+      padding: 0 30px;
+    }
+    &__info{
+      padding-left: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .cart{
+    &__title{
+      font-size: 24px;
+      padding: 28px 25px 24px 25px;
+    }
+    &__items{
+      padding: 0 25px;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: normal;
+      justify-content: center;
+    }
+    &__amount{
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: unset;
+    }
+    &__total{
+      font-size: 20px;
+    }
+  }
+}

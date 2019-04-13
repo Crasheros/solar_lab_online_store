@@ -8,7 +8,8 @@ $secondary_font_color_main:rgb(130, 138, 162);
 
 .product{
   &__amount{
-    width: 50%;
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-left: 30px;
@@ -38,7 +39,6 @@ $secondary_font_color_main:rgb(130, 138, 162);
 @media screen and (max-width: 749px) {
   .product{
     &__amount{
-      width: 100%;
       padding-left: 0;
       justify-content: center;
     }

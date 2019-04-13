@@ -19,6 +19,10 @@ import { ProductCardComponent } from './pages/product-card/product-card.componen
 import { CarouselComponent } from './pages/product-card/carousel/carousel.component';
 import { BreadcrumbsComponent } from './pages/product-card/breadcrumbs/breadcrumbs.component';
 import { SpinnerComponent } from './common/spinner/spinner.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartWrapperComponent } from './pages/cart/cart-wrapper/cart-wrapper.component';
+import { OrderRegistrationComponent } from './pages/cart/order-registration/order-registration.component';
+import { CartProductComponent } from './pages/cart/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { SpinnerComponent } from './common/spinner/spinner.component';
     ProductCardComponent,
     CarouselComponent,
     BreadcrumbsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CartComponent,
+    CartWrapperComponent,
+    OrderRegistrationComponent,
+    CartProductComponent
   ],
   imports: [
     BrowserModule,

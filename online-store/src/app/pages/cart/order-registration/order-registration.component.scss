@@ -1,0 +1,181 @@
+$primary_font_color:rgb(20, 37, 88);
+$secondary_font_color:#9ea5ba;
+$otherwhite:#f0f2f7;
+$active:#f54732;
+$bg_main:#f5f8fa;
+$btn_border:#e3e8f0;
+
+%form_title{
+  font-size: 20px;
+  font-family: "PT Root UI_Bold";
+  color: $primary_font_color;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+%form_input{
+  transition: border-color 0.25s;
+  margin-bottom: 25px;
+  border: 2px solid $btn_border;
+  padding: 10px 14px 12px 14px;
+  color: $secondary_font_color;
+  box-sizing: border-box;
+  font-family: "PT Root UI_Regular";
+  font-size: 14px;
+  border-radius: 3px;
+  &:focus{
+    outline: none;
+    border-color: $active;
+  }
+  &::placeholder{
+    color: $secondary_font_color;
+  }
+}
+
+.main{
+  &__order-registration{
+    background-color: white;
+    padding: 35px 50px 58px 50px;
+    margin: 38px 0 0 0;
+    border-radius: 5px;
+  }
+}
+
+.order-registration{
+  &__content{
+    width: calc(100%/8*5);
+    box-sizing: border-box;
+    padding-right: 35px;
+  }
+  &__title{
+    font-size: 36px;
+    color: $primary_font_color;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.2;
+    margin-bottom: 23px;
+  }
+  &__address{
+    width: 100%;
+  }
+  &__receiver{
+    width: 100%;
+  }
+  &__btn{
+    width: 100%;
+    color: white;
+    background-color: $active;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "PT Root UI_Bold";
+    line-height: 1.167;
+    cursor: pointer;
+    margin-top: 11px;
+  }
+}
+
+.address{
+  &__title{
+    @extend %form_title;
+  }
+
+  &__primary,
+  &__secondary-office,
+  &__secondary-floor,
+  &__secondary-entrance,
+  &__comment{
+    @extend %form_input;
+  }
+  &__primary{
+    width: 100%;
+  }
+  &__secondary-content{
+    display: flex;
+  }
+  &__secondary-office,
+  &__secondary-floor,
+  &__secondary-entrance{
+    width: 23%;
+    box-sizing: border-box;
+    margin-right: 18px;
+  }
+  &__comment{
+    height: 110px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 0;
+  }
+
+}
+
+.receiver{
+  &__title{
+    @extend %form_title;
+    margin-top: 30px;
+  }
+  &__first-name,
+  &__last-name,
+  &__email,
+  &__phone{
+    @extend %form_input;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main{
+    &__order-registration{
+      margin: 38px 15px 0 15px;
+      padding: 35px 32px 58px 32px;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: calc(100%/12*8);
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main{
+    &__order-registration{
+      margin-top: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .order-registration{
+    &__content{
+      width: 100%;
+    }
+    &__title{
+      font-size: 24px;
+    }
+    &__btn{
+      margin-top: 20px;
+    }
+  }
+  .address{
+    &__title{
+      font-size: 16px;
+    }
+    &__secondary-content{
+      flex-direction: column;
+    }
+    &__secondary-office,
+    &__secondary-floor,
+    &__secondary-entrance{
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .receiver{
+    &__title{
+      font-size: 16px;
+    }
+  }
+}
