@@ -3,62 +3,22 @@
 <div class="filter__price">
   <span class="filter__price-text">Цена</span>
   <div class="filter__price-content">
-    <input type="text" class="filter__price-min">
+    <input type="text" (blur)="collectFilterData()" [(ngModel)]="val[0]" class="filter__price-min">
     <span class="filter__price-divider">&mdash;</span>
-    <input type="text" class="filter__price-max">
-    <div class="filter__price-slider">
-      <div class="slider__full-bar">
-        <div class="slider__range"></div>
-        <svg class="slider__min" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-          <circle cx="9" cy="9" r="8.5" fill="#fff" stroke="#d4d8e4" stroke-width="1px"
-                  data-name="Эллипс 1342"/>
-        </svg>
-        <svg class="slider__max" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-          <circle cx="9" cy="9" r="8.5" fill="#fff" stroke="#d4d8e4" stroke-width="1px"
-                  data-name="Эллипс 1342"/>
-        </svg>
-      </div>
-
-    </div>
+    <input type="text" (blur)="collectFilterData()" [(ngModel)]="val[1]" class="filter__price-max">
+    <p-slider (onSlideEnd)="collectFilterData()" styleClass="ui-slider-override" [min]="0" [max]="20000" [range]="true" [(ngModel)]="val"></p-slider>
   </div>
 
 </div><!-- End:filter__price -->
 
 <div class="filter__sort">
   <span class="filter__sort-text">Сортировка:</span>
-  <div class="filter__sort-dropdown">
-    <div class="filter__sort-active">По наименованию</div>
-    <ul class="filter__sort-dropdown-menu">
-      <li class="filter__sort-dropdown-item--active">По наименованию</li>
-      <li class="filter__sort-dropdown-item">Дорогие сверху</li>
-      <li class="filter__sort-dropdown-item">Дешевые сверху</li>
-    </ul>
-    <svg class="filter__sort-icon" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" width="11px"
-         height="6px">
-      <path fill-rule="evenodd" fill="rgb(161, 168, 189)"
-            d="M9.701,1.828 L5.866,5.663 C5.628,5.901 5.309,5.991 4.999,5.962 C4.689,5.991 4.370,5.901 4.133,5.663 L0.297,1.828 C-0.126,1.404 -0.126,0.718 0.297,0.294 C0.721,-0.130 1.408,-0.130 1.831,0.294 L4.999,3.461 L8.167,0.294 C8.590,-0.130 9.277,-0.130 9.701,0.294 C10.124,0.718 10.124,1.404 9.701,1.828 Z"/>
-    </svg>
-  </div>
-
+  <p-dropdown (onChange)="collectFilterData()" [options]="sort.types" [(ngModel)]="sort.selected" styleClass="ui-dropdown-override"></p-dropdown>
 </div><!-- End:filter__sort -->
 
 <div class="filter__amount">
   <div class="filter__amount-text">Товаров на странице:</div>
-  <div class="filter__amount-dropdown">
-    <div class="filter__amount-active">14</div>
-    <ul class="filter__amount-dropdown-menu">
-      <li class="filter__amount-dropdown-item--active">14</li>
-      <li class="filter__amount-dropdown-item">18</li>
-      <li class="filter__amount-dropdown-item">22</li>
-    </ul>
-    <svg class="filter__amount-icon" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" width="11px"
-         height="6px">
-      <path fill-rule="evenodd" fill="rgb(161, 168, 189)"
-            d="M9.701,1.828 L5.866,5.663 C5.628,5.901 5.309,5.991 4.999,5.962 C4.689,5.991 4.370,5.901 4.133,5.663 L0.297,1.828 C-0.126,1.404 -0.126,0.718 0.297,0.294 C0.721,-0.130 1.408,-0.130 1.831,0.294 L4.999,3.461 L8.167,0.294 C8.590,-0.130 9.277,-0.130 9.701,0.294 C10.124,0.718 10.124,1.404 9.701,1.828 Z"/>
-    </svg>
-  </div>
+  <p-dropdown (onChange)="collectFilterData()" [options]="productsAmount.types" [(ngModel)]="productsAmount.selected" styleClass="ui-dropdown-override"></p-dropdown>
 </div>
 
 </div>

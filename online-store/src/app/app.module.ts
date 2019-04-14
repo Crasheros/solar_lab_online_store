@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import {SliderModule} from 'primeng/slider';
+import {DropdownModule} from 'primeng/dropdown';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,7 +60,11 @@ import { CheckOrderProductComponent } from './pages/check-order-status/check-ord
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FilterPipeModule
+    FilterPipeModule,
+    SliderModule,
+    DropdownModule,
+    BrowserAnimationsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

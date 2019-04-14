@@ -109,6 +109,9 @@ $btn_border:#e3e8f0;
       font-family: 'PT Root UI_Regular';
       color: $primary_font_color;
       padding: 5px 10px;
+      :hover{
+        color: $active;
+      }
     }
   }
 }
