@@ -6,7 +6,7 @@
     <input type="text" (blur)="collectFilterData()" [(ngModel)]="val[0]" class="filter__price-min">
     <span class="filter__price-divider">&mdash;</span>
     <input type="text" (blur)="collectFilterData()" [(ngModel)]="val[1]" class="filter__price-max">
-    <p-slider (onSlideEnd)="collectFilterData()" styleClass="ui-slider-override" [min]="0" [max]="20000" [range]="true" [(ngModel)]="val"></p-slider>
+    <p-slider (mouseLeave)="collectFilterData()" styleClass="ui-slider-override" [min]="0" [max]="20000" [range]="true" [(ngModel)]="val"></p-slider>
   </div>
 
 </div><!-- End:filter__price -->

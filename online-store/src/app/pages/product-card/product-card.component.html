@@ -1,17 +1,17 @@
 <main class="main">
   <div class="main__wrapper">
-    <app-breadcrumbs></app-breadcrumbs>
+    <app-breadcrumbs [product]="product"></app-breadcrumbs>
     <div class="main__container">
       <div class="main__content">
         <div class="main__carousel">
-          <app-carousel></app-carousel>
+          <app-carousel (updateImg)="imageId = $event" [product]="product"></app-carousel>
         </div>
         <div class="main__product-image">
-          <img src="../../../assets/images/products/chair0/chair0_max.jpg" alt="chair">
+          <img src="../../../assets/images/products/{{product.galleryUrls.max[imageId]}}" alt="chair">
         </div>
         <div class="main__product-info">
-          <span class="product__name">Кресло Ханна</span>
-          <span class="product__code">Код товара 1049556</span>
+          <span class="product__name">{{product.name}}</span>
+          <span class="product__code">Код товара {{product.code}}</span>
           <div class="product__available">
             <svg class="product__available-icon" xmlns="http://www.w3.org/2000/svg" width="8px"
                  height="8px">
@@ -22,7 +22,7 @@
           </div>
           <div class="product__purchase">
             <div class="product__content">
-              <div class="product__price">9 399 &#8381;</div>
+              <div class="product__price">{{product.price}} &#8381;</div>
               <app-spinner></app-spinner>
 
             </div>
@@ -44,18 +44,11 @@
       <ul class="main__product-description">
         <li class="main__product-description-item">
           <span class="description__title">Описание</span>
-          <p class="description__text">Кресло Ханна — элегантное решение для кухни или столовой, выдержанной в
-            современном стиле. Каркас модели выполнен из массива древесины, видимые элементы отделаны березовым шпоном и
-            покрыты белой эмалью. Велюровая обивка приятна на ощупь, долго сохраняет опрятный вид и первоначальный цвет.
-            Мягкое сиденье обеспечивает комфорт во время длительной трапезы или дружеской беседы за столом. Высокая
-            спинка с легким изгибом позволяет принять удобное положение, расслабив спину.</p>
+          <p class="description__text">{{product.description[0]}}</p>
         </li>
         <li class="main__product-description-item">
           <span class="description__title">Материал обивки — ткань</span>
-          <p class="description__text">Удовольствие от трапезы за кухонным столом во многом зависит от качества кухонных
-            стульев. При выборе важно все, в том числе материал обивки. Кухонные стулья с тканевой обивкой сиденья и
-            спинки практичны, комфортны и гигиеничны: текстиль приятен на ощупь, не способствует образованию конденсата
-            при соприкосновении с телом, стоек к механическим повреждениям, долго сохраняет первоначальный вид.</p>
+          <p class="description__text">{{product.description[1]}}</p>
         </li>
       </ul>
     </div>
