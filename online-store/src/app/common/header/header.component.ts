@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Categories} from "../../mock-categories";
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  categories = Categories;
   burgerState = false;
   @Output() showBlackBg = new EventEmitter();
   constructor() { }

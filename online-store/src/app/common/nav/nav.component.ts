@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Products} from '../../mock-products';
+import {Categories} from "../../mock-categories";
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +9,9 @@ import {Products} from '../../mock-products';
 })
 export class NavComponent implements OnInit {
   products = Products;
+  categories = Categories;
   filter: any = {name: ''};
+  @Input() url:any;
   @Input() navBarState: any;
   @Output() hideBlackBg = new EventEmitter();
 

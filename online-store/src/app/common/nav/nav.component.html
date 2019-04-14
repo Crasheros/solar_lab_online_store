@@ -1,11 +1,7 @@
 <nav [ngClass]="navBarState ? 'nav--active' : 'nav'">
   <div class="nav__content">
     <ul class="nav__menu">
-      <li class="nav__menu-item--active"><a href="#">стулья и кресла</a></li>
-      <li class="nav__menu-item"><a href="#">кровати и матрасы</a></li>
-      <li class="nav__menu-item"><a href="#">шкафы и комоды</a></li>
-      <li class="nav__menu-item"><a href="#">мебель для кухни</a></li>
-      <li class="nav__menu-item"><a href="#">товары для дома</a></li>
+      <li *ngFor="let category of categories" routerLinkActive="nav__menu-item--active" class="nav__menu-item"><a routerLink="/catalog/{{category.id}}">{{category.name}}</a></li>
     </ul>
     <div class="nav__search">
       <input type="text" [(ngModel)]="filter.name" placeholder="Поиск по товарам">
@@ -18,7 +14,7 @@
       </svg>
       <ul *ngIf="filter.name !== ''" class="nav__search-options">
         <li *ngFor="let product of products | filterBy: filter " class="nav__search-option">
-          {{ product.name }}
+          <a routerLink="/product/{{product.id}}">{{ product.name }}</a>
         </li>
         <li *ngIf="(products | filterBy: filter).length === 0" class="nav__search-option">Товары не найдены</li>
       </ul>

@@ -9,11 +9,7 @@
       <div class="burger-menu__content">
 
         <ul class="burger-menu__menu">
-          <li class="burger-menu__menu-item"><a href="#">стулья и кресла</a></li>
-          <li class="burger-menu__menu-item"><a href="#">кровати и матрасы</a></li>
-          <li class="burger-menu__menu-item"><a href="#">шкафы и комоды</a></li>
-          <li class="burger-menu__menu-item"><a href="#">мебель для кухни</a></li>
-          <li class="burger-menu__menu-item"><a href="#">товары для дома</a></li>
+          <li *ngFor="let category of categories" class="burger-menu__menu-item"><a routerLink="/catalog/{{category.id}}">{{category.name}}</a></li>
         </ul>
 
         <div class="burger-menu__divider"></div>
@@ -30,7 +26,7 @@
         </div>
 
         <div class="burger-menu__check-order">
-          <a href="#" class="check-order__content">
+          <a routerLink="/check-order-auth" class="check-order__content">
             <span class="check-order__text">Проверить статус заказа</span>
             <svg class="check-order__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
               <path data-name="Check-order" transform="translate(-921 -34)" fill="#142558"
@@ -60,7 +56,7 @@
       <path fill="#343e5c" d="M10 0H0v2h18V0h-8zm0 6H0v2h18V6h-8zm0 6H0v2h18v-2h-8z" data-name="burger menu"/>
     </svg>
 
-    <a href="#" class="header__logo">
+    <a routerLink="/" class="header__logo">
       <img src="../../../assets/images/logo.png" alt="logo">
     </a>
 
@@ -73,7 +69,7 @@
     </div>
 
     <div class="header__check-order">
-      <a href="#" class="check-order__content">
+      <a routerLink="/check-order-auth" class="check-order__content">
         <span class="check-order__text">Проверить статус заказа</span>
         <svg class="check-order__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
           <path data-name="Check-order"
@@ -99,7 +95,7 @@
               d="M1033,40.052l-1,2.988c-0.37.837-.9,1.991-2,1.991h-9.64l0.12,1H1033l-1,1.991h-12.65l-0.64.075-1.19-10.033H1016a1,1,0,0,1-1-1,0.974,0.974,0,0,1,.9-1.058l3.39-.014,0.26,2.15a1.148,1.148,0,0,1,.45-0.083h12C1033.1,38.061,1033,38.952,1033,40.052Zm-12,8.962a1.992,1.992,0,1,1-2,1.992A2,2,0,0,1,1021,49.015Zm8,0a1.992,1.992,0,1,1-2,1.992A2,2,0,0,1,1029,49.015Z"
               data-name="Shopping Cart Icon" transform="translate(-1015 -36)"/>
       </svg>
-      <a href="#" class="header__cart-text">Корзина</a>
+      <a routerLink="/cart" class="header__cart-text">Корзина</a>
       <span class="header__cart-count">0</span>
     </div>
 

@@ -1,4 +1,5 @@
-import { Component,Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,11 @@ export class AppComponent {
   navBarState = false;
   toggleBlackBg( state:any) :void{
     this.navBarState = state;
+  }
+  href = this.router.url;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
   }
 }

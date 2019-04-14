@@ -1,8 +1,8 @@
 <div class="main__products">
   <div class="main__products-wrapper">
-    <div *ngFor="let product of products" class="main__product">
+    <a *ngFor="let product of products" class="main__product" routerLink="/product/{{product.id}}">
       <app-product [product]="product"></app-product>
-    </div>
+    </a>
     <div class="main__products-banner">
       <app-products-banner></app-products-banner>
     </div>
