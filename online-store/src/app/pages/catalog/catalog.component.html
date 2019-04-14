@@ -1,6 +1,6 @@
 <main class="main">
   <app-banner-big [categoryName]="category.name"></app-banner-big>
-  <app-filter></app-filter>
-  <app-products-wrapper></app-products-wrapper>
+  <app-filter (updateFilter)="getFilterData($event)"></app-filter>
+  <app-products-wrapper [productFilter]="productFilter"></app-products-wrapper>
   <app-pagination></app-pagination>
 </main>

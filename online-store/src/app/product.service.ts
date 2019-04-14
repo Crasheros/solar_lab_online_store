@@ -15,4 +15,9 @@ export class ProductService {
   getCategorizedProducts(categoryId:number): Observable<Product[]>{
     return of (Products.filter(product => product.categoryId === categoryId));
   }
+  getFilteredProducts(categoryId:number,min:number,max:number,amount:number): Observable<Product[]>{
+    let products = Products.filter(product => product.categoryId === categoryId && product.price >= min && product.price <= max);
+    if (products.length > amount) products.length = amount;
+    return of (products);
+  }
 }

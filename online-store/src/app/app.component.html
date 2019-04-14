@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header (showBlackBg)="toggleBlackBg(true)"></app-header>
-<app-nav [url] = 'href' *ngIf="this.activatedRoute !== '/cart'" [navBarState]="navBarState" (hideBlackBg)="toggleBlackBg(false)"></app-nav>
+<app-nav *ngIf="this.activatedRoute !== '/cart'" [navBarState]="navBarState" (hideBlackBg)="toggleBlackBg(false)"></app-nav>
 <router-outlet></router-outlet>
 <app-footer [navBarState]="navBarState"></app-footer>

@@ -11,7 +11,6 @@ export class NavComponent implements OnInit {
   products = Products;
   categories = Categories;
   filter: any = {name: ''};
-  @Input() url:any;
   @Input() navBarState: any;
   @Output() hideBlackBg = new EventEmitter();
 

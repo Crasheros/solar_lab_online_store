@@ -9,6 +9,7 @@ import {CategoryService} from '../../category.service';
 })
 export class CatalogComponent implements OnInit,DoCheck {
   category:any;
+  productFilter:any;
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
@@ -26,6 +27,10 @@ export class CatalogComponent implements OnInit,DoCheck {
     const id = +this.route.snapshot.paramMap.get('id');
     this.CategoryService.getCategory(id)
       .subscribe(category => this.category = category);
+  }
+
+  getFilterData(data):void {
+    this.productFilter = data;
   }
 
 }
