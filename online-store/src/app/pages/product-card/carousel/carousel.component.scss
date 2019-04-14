@@ -17,6 +17,8 @@ $secondary_font_color_main:rgb(130, 138, 162);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border 0.5s;
+  user-select: none;
 }
 
 .carousel{
@@ -37,9 +39,19 @@ $secondary_font_color_main:rgb(130, 138, 162);
   &__image{
     @extend %carousel-image;
     border-color: transparent;
+    img{
+      width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
     &--active{
       @extend %carousel-image;
       border-color: $btn_border;
+      img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+      }
     }
   }
 }

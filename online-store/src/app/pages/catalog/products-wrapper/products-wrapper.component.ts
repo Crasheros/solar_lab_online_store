@@ -17,7 +17,6 @@ export class ProductsWrapperComponent implements DoCheck {
 
   ngDoCheck(){
     this.getProducts();
-    console.log(this.productFilter);
   }
   getProducts(): void {
     const id = +this.route.snapshot.paramMap.get('id');

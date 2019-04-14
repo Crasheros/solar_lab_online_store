@@ -7,11 +7,7 @@
         <div class="footer__copyright-mob">&#169; Все права защищены, 2019</div>
       </div>
       <ul class="footer__menu">
-        <li class="footer__menu-item"><a href="#">стулья и кресла</a></li>
-        <li class="footer__menu-item"><a href="#">кровати и матрасы</a></li>
-        <li class="footer__menu-item"><a href="#">шкафы и комоды</a></li>
-        <li class="footer__menu-item"><a href="#">мебель для кухни</a></li>
-        <li class="footer__menu-item"><a href="#">товары для дома</a></li>
+        <li *ngFor="let category of categories" class="footer__menu-item"><a routerLink="/catalog/{{category.id}}">{{category.name}}</a></li>
       </ul>
     </div>
 
@@ -34,7 +30,7 @@
         </div>
       </div>
       <div class="footer__check-order">
-        <a href="#">Проверить статус заказа</a>
+        <a routerLink="/check-order-auth">Проверить статус заказа</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19">
           <path data-name="Check-order"
                 d="M934.015,43.445l-3.231-3L930.306,40l-0.6.444-0.718.777,2.393,2.221-2.393,2.332,0.718,0.666,0.6,0.555,0.478-.555Z"

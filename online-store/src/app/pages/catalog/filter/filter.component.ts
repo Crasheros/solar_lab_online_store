@@ -25,16 +25,16 @@ export class FilterComponent implements OnInit {
   };
   productsAmount = {
     types: [{
-      label: 1,
-      value:1,
+      label: 6,
+      value:6,
     }, {
-      label: 3,
-      value:3
+      label: 14,
+      value:14
     }, {
-      label: 5,
-      value: 5,
+      label: 22,
+      value: 22,
     }],
-    selected: 5,
+    selected: 22,
   };
   constructor() {
   }

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Categories} from "../../mock-categories";
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   @Input() navBarState: any;
+  categories = Categories;
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

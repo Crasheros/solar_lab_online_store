@@ -1,13 +1,13 @@
 <div class="main__breadcrumbs">
-  <a href="../index.html" class="breadcrumbs__main-page">Главная</a>
+  <a routerLink="/" class="breadcrumbs__main-page">Главная</a>
   <svg class="breadcrumbs__divider" xmlns="http://www.w3.org/2000/svg" width="6px" height="8px">
     <path fill="rgb(130, 138, 162)"
           d="M5.807,3.930 L2.536,0.504 L2.052,-0.004 L1.446,0.504 L0.719,1.392 L3.142,3.930 L0.719,6.596 L1.446,7.358 L2.052,7.992 L2.536,7.358 L5.807,3.930 Z"/>
   </svg>
-  <a href="../index.html" class="breadcrumbs__catalog">Стулья и кресла</a>
+  <a routerLink="/catalog/{{category.id}}" class="breadcrumbs__catalog">{{category.name}}</a>
   <svg class="breadcrumbs__divider" xmlns="http://www.w3.org/2000/svg" width="6px" height="8px">
     <path fill="rgb(130, 138, 162)"
           d="M5.807,3.930 L2.536,0.504 L2.052,-0.004 L1.446,0.504 L0.719,1.392 L3.142,3.930 L0.719,6.596 L1.446,7.358 L2.052,7.992 L2.536,7.358 L5.807,3.930 Z"/>
   </svg>
-  <div class="breadcrumbs__product">Кресло Ханна</div>
+  <div class="breadcrumbs__product">{{product.name}}</div>
 </div>
