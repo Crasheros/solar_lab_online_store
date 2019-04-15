@@ -17,80 +17,6 @@ $btn_border:#e3e8f0;
   }
 }
 
-%page {
-  font-size: 14px;
-  font-family: "PT Root UI_Bold";
-  color: $primary_font_color;
-  padding: 15px 20px;
-}
-
-.pagination {
-  &__first-icon {
-    margin-right: 15px;
-    cursor: pointer;
-    & :nth-child(n + 2){
-      transition: fill 0.25s;
-    }
-    &:hover :nth-child(n + 2){
-      fill: $active;
-    }
-  }
-
-  &__prev-icon{
-    cursor: pointer;
-    & :last-child{
-      transition: fill 0.25s;
-    }
-    &:hover :last-child{
-      fill: $active;
-    }
-  }
-
-  &__pages {
-    display: flex;
-    list-style: none;
-    width: 38%;
-    justify-content: space-around;
-  }
-  &__page {
-    @extend %page;
-    cursor: pointer;
-    transition: color 0.25s;
-    &:hover {
-      color: $active;
-    }
-    &--active {
-      @extend %page;
-      background-color: white;
-      border-radius: 100%;
-      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
-      color: $active;
-    }
-  }
-
-  &__next-icon{
-    cursor: pointer;
-    margin-left: 26px;
-    & :last-child{
-      transition: fill 0.25s;
-    }
-    &:hover :last-child{
-      fill: $active;
-    }
-  }
-
-  &__last-icon{
-    margin-left: 15px;
-    cursor: pointer;
-    & :nth-child(n + 2){
-      transition: fill 0.25s;
-    }
-    &:hover :nth-child(n + 2){
-      fill: $active;
-    }
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .main{
     &__pagination{
@@ -98,19 +24,6 @@ $btn_border:#e3e8f0;
       margin-left: 15px;
     }
   }
-
-  .pagination{
-    &__first-icon{
-      margin-left: 10px;
-    }
-    &__pages{
-      width: 66.7%;
-    }
-    &__last-icon{
-      margin-right: 10px;
-    }
-  }
-
 }
 
 @media screen and (max-width: 749px) {
@@ -121,30 +34,39 @@ $btn_border:#e3e8f0;
       padding: 0 24px;
     }
   }
+}
 
-  .pagination{
-    &__first-icon{
-      margin-left: 0;
-      margin-right: 10px;
+
+:host {
+  ::ng-deep .ui-paginator-override {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    .ui-paginator-element{
+      border: 3px solid $btn_border;
+      border-radius: 100%;
+      padding: 20px;
+      margin: 0 10px;
     }
-    &__prev-icon{
-      margin-right: 10px;
+    .ui-paginator-pages{
+      height: 100%;
+      display: flex;
     }
-    &__pages{
-      width: auto;
+    .ui-paginator-page{
+      padding: 24px 22px !important;
+      display: flex;
+      align-items: center;
+      font-family: "PT Root UI_Bold";
+      border-radius: 100% !important;
     }
-    &__page{
-      display: none;
-      &--active{
-        padding: 10px 15px;
-      }
-    }
-    &__next-icon{
-      margin-left: 10px;
-    }
-    &__last-icon{
-      margin-left: 10px;
-      margin-right: 0;
+
+    .ui-state-active{
+      background-color: white !important;
+      border-radius: 100% !important;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3) !important;
+      color: $active !important;
+      outline: none !important;
     }
   }
 }

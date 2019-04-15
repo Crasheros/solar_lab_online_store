@@ -10,6 +10,8 @@ import {CategoryService} from '../../category.service';
 export class CatalogComponent implements OnInit,DoCheck {
   category:any;
   productFilter:any;
+  productAmount:any;
+  page = 0;
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
@@ -31,6 +33,14 @@ export class CatalogComponent implements OnInit,DoCheck {
 
   getFilterData(data):void {
     this.productFilter = data;
+  }
+
+  getPage(page:any){
+    this.page = page.page;
+  }
+
+  updateProductAmount(amount:number){
+    this.productAmount = amount;
   }
 
 }
