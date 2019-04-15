@@ -6,6 +6,7 @@ import {SliderModule} from 'primeng/slider';
 import {DropdownModule} from 'primeng/dropdown';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { OrderModule } from 'ngx-order-pipe';
+import {PaginatorModule} from 'primeng/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -64,7 +65,8 @@ import { CheckOrderProductComponent } from './pages/check-order-status/check-ord
     SliderModule,
     DropdownModule,
     BrowserAnimationsModule,
-    OrderModule
+    OrderModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

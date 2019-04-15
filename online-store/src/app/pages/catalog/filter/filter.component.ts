@@ -8,7 +8,7 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class FilterComponent implements OnInit {
   @Output() updateFilter = new EventEmitter();
-  val = [3000, 15000];
+  val = [0, 20000];
   sort = {
     types: [
       {

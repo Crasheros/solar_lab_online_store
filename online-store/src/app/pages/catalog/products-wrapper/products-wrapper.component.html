@@ -2,10 +2,10 @@
   <div class="main__products-wrapper">
     <ng-template ngFor let-product [ngForOf]="products | orderBy: productFilter.sort[0]:productFilter.sort[1]"
                  let-i="index">
-      <div class="main__product">
+      <div *ngIf="i >= productFilter.amount * page && i < productFilter.amount * (page + 1)" class="main__product">
         <app-product [product]="product"></app-product>
       </div>
-      <div *ngIf="i === 5" class="main__products-banner">
+      <div *ngIf="i === productFilter.amount * page + 5" class="main__products-banner">
         <app-products-banner></app-products-banner>
       </div>
     </ng-template>
