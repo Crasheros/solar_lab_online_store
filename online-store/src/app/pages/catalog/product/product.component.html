@@ -5,6 +5,6 @@
   <div class="product__info">
     <div class="product__name">{{product.name}}</div>
     <div class="product__price">{{product.price}} &#8381;</div>
-    <div class="product__cart-btn btn-additional">В корзину</div>
+    <div (click)="addToCart()" class="product__cart-btn btn-additional">В корзину</div>
   </div>
 </div>

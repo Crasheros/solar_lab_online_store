@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-wrapper.component.scss']
 })
 export class CartWrapperComponent implements OnInit {
-
+  cart:any;
   constructor() { }
 
   ngOnInit() {
+    this.initCart();
+  }
+
+  initCart(){
+    this.cart = JSON.parse(localStorage.getItem('cart'));
   }
 
 }

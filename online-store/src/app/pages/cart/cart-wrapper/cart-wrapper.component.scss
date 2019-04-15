@@ -52,6 +52,9 @@ $btn_border:#e3e8f0;
     font-size: 24px;
     line-height: 1.2;
     font-family: "PT Root UI_Bold";
+    &-text{
+      margin-right: 10px;
+    }
   }
 }
 

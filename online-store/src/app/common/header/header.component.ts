@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output,DoCheck} from '@angular/core';
 import {Categories} from "../../mock-categories";
 
 @Component({
@@ -6,12 +6,16 @@ import {Categories} from "../../mock-categories";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements DoCheck {
   categories = Categories;
   burgerState = false;
   @Output() showBlackBg = new EventEmitter();
+  cart :number;
   constructor() { }
-  ngOnInit() {
+
+  ngDoCheck(){
+    let storage = JSON.parse(localStorage.getItem('cart'));
+    this.cart = storage.count;
   }
 
 }
