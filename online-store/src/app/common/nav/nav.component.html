@@ -14,7 +14,7 @@
       </svg>
       <ul *ngIf="filter.name !== ''" class="nav__search-options">
         <li *ngFor="let product of products | filterBy: filter " class="nav__search-option">
-          <a routerLink="/product/{{product.id}}">{{ product.name }}</a>
+          <a (click)="filter.name = ''" routerLink="/product/{{product.id}}">{{ product.name }}</a>
         </li>
         <li *ngIf="(products | filterBy: filter).length === 0" class="nav__search-option">Товары не найдены</li>
       </ul>

@@ -11,5 +11,17 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
   }
+  addToCart(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart.products.push(this.product);
+    cart.products[cart.products.length-1].count = 1;
+    cart.count = 0;
+    cart.total = 0;
+    cart.products.forEach(product => {
+      cart.count += product.count;
+      cart.total += product.price * product.count;
+    });
+    localStorage.setItem('cart',JSON.stringify(cart));
+  }
 
 }

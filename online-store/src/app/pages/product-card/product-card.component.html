@@ -23,11 +23,11 @@
           <div class="product__purchase">
             <div class="product__content">
               <div class="product__price">{{product.price}} &#8381;</div>
-              <app-spinner></app-spinner>
+              <app-spinner [amount]="1" (productAmount)="changeAmount($event)"></app-spinner>
 
             </div>
 
-            <div class="product__buy-btn">Купить</div>
+            <div class="product__buy-btn" (click)="addAmountToCart(amountProduct)">Купить</div>
             <div class="product__free-delivery">
               <svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px">
                 <path fill="rgb(227, 232, 240)"
